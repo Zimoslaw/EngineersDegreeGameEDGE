@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Burst.CompilerServices;
@@ -14,12 +14,11 @@ public class InteractionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
 
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1.5f, Color.blue);
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1.5f))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, 1.5f))
         {
-            if (hit.collider.tag == "Interactable")
+            if (hit.collider.CompareTag("Interactable"))
             {
                 Interactable focusedObject = hit.collider.GetComponent<Interactable>();
                 if (focusedObject != null)
@@ -29,13 +28,29 @@ public class InteractionController : MonoBehaviour
                     string action = "";
                     switch (focusedObject.Type)
                     {
-                        case Interactable.interactableTypeEnum.Note:
+                        case Interactable.InteractableTypeEnum.Note:
                             action = "Przeczytaj";
                             break;
-                        case Interactable.interactableTypeEnum.Door:
+                        case Interactable.InteractableTypeEnum.Kerosene:
+                            action = "Zabierz";
+                            break;
+                        case Interactable.InteractableTypeEnum.Key:
+                            action = "Zabierz";
+                            break;
+                        case Interactable.InteractableTypeEnum.Light:
                             if (focusedObject.State == 0)
                             {
-                                action = "Otw�rz";
+                                action = "Zapal";
+                            }
+                            else
+                            {
+                                action = "Zgaś";
+                            }
+                            break;
+                        case Interactable.InteractableTypeEnum.Door:
+                            if (focusedObject.State == 0)
+                            {
+                                action = "Otwórz";
                             } else
                             {
                                 action = "Zamknij";
@@ -47,7 +62,7 @@ public class InteractionController : MonoBehaviour
 
                     if(Input.GetKeyDown(KeyCode.E))
                     {
-                        focusedObject.Interact();
+                        focusedObject.Interact(gameObject);
                     }
                 }
             }

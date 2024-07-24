@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,20 +9,23 @@ using UnityEngine.Scripting.APIUpdating;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField] private float _movementSpeed = 12;
+    [SerializeField] private float _movementSpeed = 60;
     [SerializeField] private float _rotationSpeed = 4;
     [SerializeField] private float _cameraSmoothness = 10f;
 
     [SerializeField] private Vector3 _cameraPositionOffset = new(0, 1.7f, 0);
 
     // Angle constraints for X axis rotation
-    [SerializeField] private float[] _cameraRotationVerticalConstraints = { 80f, 280f };
+    [SerializeField] private float[] _cameraRotationVerticalConstraints = { 70f, 270f };
+
+
+    [SerializeField] private Camera _playerCamera;
+    [SerializeField] private Transform _playerLamp;
 
     // Lerping targets
     private Quaternion _cameraTarget;
     private Quaternion _playerTarget;
-
-    [SerializeField] private Camera _playerCamera;
+    [SerializeField] private Transform _lampTarget;
 
     private Rigidbody _rigidBody;
 
@@ -45,8 +49,10 @@ public class PlayerControl : MonoBehaviour
         CameraMove();
 
         Move();
+
+        LampMove();
         
-        test.text = "" + _rigidBody.velocity;
+        //test.text = "" + _rigidBody.velocity;
     }
 
     // Camera rotation and movement
@@ -90,11 +96,29 @@ public class PlayerControl : MonoBehaviour
         // For constraining max movement speed
         float currentSpeed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
 
-        _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * (100 - (currentSpeed * 50)) * verticalAxis * transform.forward);
+        _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * verticalAxis * transform.forward);
 
         _rigidBody.AddForce(sideMultiplier * _movementSpeed * (100 - (currentSpeed * 50)) * horizontalAxis * transform.right);
 
         // Move camera
         _playerCamera.transform.position = transform.position + _cameraPositionOffset;
+    }
+
+    // Lamp smooth movement
+    private void LampMove()
+    {
+        if(!_playerLamp.IsUnityNull())
+        {
+            _playerLamp.position = _lampTarget.position;
+
+            Quaternion newLampRotation = _lampTarget.rotation;
+
+            if (newLampRotation.eulerAngles.x > 310)
+            {
+                newLampRotation = Quaternion.Euler(_playerLamp.rotation.eulerAngles.x, _lampTarget.rotation.eulerAngles.y, _lampTarget.rotation.eulerAngles.z);
+            }
+
+            _playerLamp.rotation = Quaternion.Slerp(_playerLamp.rotation, newLampRotation, 25 * Time.deltaTime);
+        }
     }
 }
