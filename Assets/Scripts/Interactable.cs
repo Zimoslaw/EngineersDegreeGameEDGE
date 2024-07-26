@@ -41,6 +41,9 @@ public class Interactable : MonoBehaviour
                     State = 0;
                 }
                 break;
+            case InteractableTypeEnum.Kerosene:
+                Player.GetComponent<PlayerInventory>().PutItem(InteractableTypeEnum.Kerosene);
+                break;
         }
     }
 }
