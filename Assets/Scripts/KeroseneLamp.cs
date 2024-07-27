@@ -12,16 +12,17 @@ public class KeroseneLamp : MonoBehaviour
 
 	[SerializeField] private float _burningSpeed = 9f;
 	[SerializeField] private float _flickeringRate = 0.8f;
+
 	private float _burningTimer = 0;
 	private float _flickeringTimer = 0;
-	private float[] _intensities = { 2f, 1f };
-	private float[] _lowIntesities = { 0, 0 };
-	private float[] _veryLowIntesities = { 0, 0 };
-	[SerializeField] private float[] _flameScales = { 5, 3, 2 };
+	// Lamp light intesities
+	private float[] _intensities = { 2f, 1f }; // Kerosene > 10
+	private float[] _lowIntesities = { 0, 0 }; // Kerosene <= 10
+	private float[] _veryLowIntesities = { 0, 0 }; // Kerosene < 4
+    // Lamp flame scales 
+    [SerializeField] private float[] _flameScales = { 5, 3, 2 };
 
-    public TextMeshProUGUI test;
-
-    void Start()
+	void Start()
 	{
 		_intensities[0] = _lights[0].intensity;
 		_intensities[1] = _lights[1].intensity;
@@ -33,11 +34,10 @@ public class KeroseneLamp : MonoBehaviour
 		_veryLowIntesities[1] = _lights[1].intensity * 0.1f;
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
-        // Kerosene burning and light level
-        _burningTimer += Time.deltaTime;
+		// Kerosene burning and light level
+		_burningTimer += Time.deltaTime;
 
 		if(_burningTimer >= _burningSpeed)
 		{
@@ -63,18 +63,18 @@ public class KeroseneLamp : MonoBehaviour
 		}
 		else if (KeroseseneLevel <= 3)
 		{
-            if (_flame.transform.localScale.y > _flameScales[2])
-                _flame.transform.localScale -= new Vector3(0, Time.deltaTime, 0);
+			if (_flame.transform.localScale.y > _flameScales[2])
+				_flame.transform.localScale -= new Vector3(0, Time.deltaTime, 0);
 
-            if (_lights[0].intensity > _veryLowIntesities[0])
-                _lights[0].intensity -= Time.deltaTime;
-            else
-                _lights[0].intensity = _veryLowIntesities[0];
+			if (_lights[0].intensity > _veryLowIntesities[0])
+				_lights[0].intensity -= Time.deltaTime;
+			else
+				_lights[0].intensity = _veryLowIntesities[0];
 
-            if (_lights[1].intensity > _veryLowIntesities[1])
-                _lights[1].intensity -= Time.deltaTime;
-            else
-                _lights[1].intensity = _veryLowIntesities[1];
+			if (_lights[1].intensity > _veryLowIntesities[1])
+				_lights[1].intensity -= Time.deltaTime;
+			else
+				_lights[1].intensity = _veryLowIntesities[1];
 
 			if (KeroseseneLevel <= 0)
 			{
@@ -102,6 +102,7 @@ public class KeroseneLamp : MonoBehaviour
 		}
 	}
 
+	// Fill up the lamp with kerosene
 	public void FillUp()
 	{
 		KeroseseneLevel = 100;
