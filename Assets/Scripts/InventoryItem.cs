@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Interactable;
 
-public class Item : MonoBehaviour
+public class InventoryItem : MonoBehaviour
 {
-
-    public string Name = "item";
     public InteractableTypeEnum Type = InteractableTypeEnum.Kerosene;
     public int KeyID = 0; // For keys only
 
-    public Item(string name, InteractableTypeEnum type)
+    public InventoryItem(InteractableTypeEnum type, int keyID)
     {
-        Name = name;
         Type = type;
-        KeyID = 0;
+        KeyID = keyID;
     }
 
-    public Item(string name, int keyID)
+    public void Init(InteractableTypeEnum type, int keyID)
     {
-        Name = name;
-        Type = InteractableTypeEnum.Key;
+        Type = type;
         KeyID = keyID;
     }
 }

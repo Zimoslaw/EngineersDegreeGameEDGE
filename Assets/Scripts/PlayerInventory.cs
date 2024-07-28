@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using static Interactable;
 using static UnityEditor.Progress;
 
@@ -11,8 +12,9 @@ public class PlayerInventory : MonoBehaviour
 	public Dictionary<Interactable, int> items = new();
 
 	[SerializeField] private GameObject _player;
+    [SerializeField] private KeroseneLamp _lamp;
     [SerializeField] private GameObject _inventoryBackground;
-    [SerializeField] private TextMeshProUGUI _inventoryTest;
+    [SerializeField] private GameObject _inventoryItem;
 
 	public void PutItem(Interactable item)
 	{
@@ -34,21 +36,70 @@ public class PlayerInventory : MonoBehaviour
 		}
 	}
 
-	public void UseItem()
+	public void UseItem(InventoryItem item)
 	{
+		switch(item.Type)
+		{
+			case InteractableTypeEnum.Kerosene:
+				if(_lamp.KeroseseneLevel < 100)
+				{
+                    _lamp.FillUp();
+                    foreach (Interactable key in items.Keys)
+                    {
+                        if(key.Type == InteractableTypeEnum.Kerosene)
+						{
+							items[key]--;
+							if (items[key] <= 0)
+							{
+                                items.Remove(key);
+                            }
+                            break;
+                        }
+                    }
+                }
+				break;
+		}
 
+		OpenInventory(); // Refreshing inventory
 	}
 
 	public void OpenInventory()
 	{
-		_inventoryTest.text = "";
+		int yPos = 380; // Y position of next item
 
+		// Deleting previous items
+		foreach(Transform child in _inventoryBackground.transform)
+		{
+			if(!child.gameObject.CompareTag("Player"))
+                Destroy(child.gameObject);
+		}
+
+		// Displaying items
         foreach (Interactable item in items.Keys)
 		{
+			GameObject newItem = Instantiate(_inventoryItem);
+			newItem.transform.SetParent(_inventoryBackground.transform, false);
+			newItem.GetComponent<RectTransform>().localPosition = new Vector3(-420, yPos-=36, 0);
+
+            InventoryItem inventoryItem = newItem.AddComponent<InventoryItem>();
+
+            switch (item.Type)
+			{
+				case InteractableTypeEnum.Kerosene:
+                    
+                    inventoryItem.Init(item.Type, 0);
+                    break;
+				default:
+					inventoryItem.Init(item.Type, item.KeyID);
+					break;
+			}
+
+			newItem.GetComponent<Button>().onClick.AddListener(() => gameObject.GetComponent<PlayerInventory>().UseItem(inventoryItem));
+
 			if (items[item] > 1)
-				_inventoryTest.text += item.Name + " (×" + items[item] + ")\n";
+                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name + " (×" + items[item] + ")";
 			else
-                _inventoryTest.text += item.Name + "\n";
+                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
         }
 
         _inventoryBackground.SetActive(true);

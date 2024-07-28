@@ -86,10 +86,22 @@ public class KeroseneLamp : MonoBehaviour
 		}
 		else
 		{
-			_lights[0].intensity = _intensities[0];
-			_lights[1].intensity = _intensities[1];
-			_flame.SetActive(true);
-			_flame.transform.localScale = new Vector3(1, _flameScales[0], 1);
+			if (_lights[0].intensity < _intensities[0])
+				_lights[0].intensity += Time.deltaTime;
+			else
+				_lights[0].intensity = _intensities[0];
+
+            if (_lights[1].intensity < _intensities[1])
+                _lights[1].intensity += Time.deltaTime;
+            else
+                _lights[1].intensity = _intensities[1];
+
+            _flame.SetActive(true);
+
+            if (_flame.transform.localScale.y < _flameScales[0])
+                _flame.transform.localScale += new Vector3(0, Time.deltaTime, 0);
+			else
+				_flame.transform.localScale = new Vector3(1, _flameScales[0], 1);
 		}
 
 		// Fire flickering
@@ -98,7 +110,7 @@ public class KeroseneLamp : MonoBehaviour
 		if(_flickeringTimer >= _flickeringRate)
 		{
 			_flickeringTimer = 0;
-			_lights[0].intensity -= Random.Range(0, 0.2f);
+			_lights[0].intensity += Random.Range(-0.1f, 0.1f);
 		}
 	}
 
