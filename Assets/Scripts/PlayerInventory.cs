@@ -12,24 +12,24 @@ public class PlayerInventory : MonoBehaviour
 	public Dictionary<Interactable, int> items = new();
 
 	[SerializeField] private GameObject _player;
-    [SerializeField] private KeroseneLamp _lamp;
-    [SerializeField] private GameObject _inventoryBackground;
-    [SerializeField] private GameObject _inventoryItem;
+	[SerializeField] private KeroseneLamp _lamp;
+	[SerializeField] private GameObject _inventoryBackground;
+	[SerializeField] private GameObject _inventoryItem;
 
 	public void PutItem(Interactable item)
 	{
 		if (item.Type == InteractableTypeEnum.Kerosene)
 		{
-            foreach (Interactable key in items.Keys)
-            {
+			foreach (Interactable key in items.Keys)
+			{
 				if (key.Type == InteractableTypeEnum.Kerosene)
 				{
-                    items[key]++;
-                    return;
+					items[key]++;
+					return;
 				}
-            }
+			}
 			items.Add(item, 1);
-        }
+		}
 		else
 		{
 			items.Add(item, 1);
@@ -43,24 +43,28 @@ public class PlayerInventory : MonoBehaviour
 			case InteractableTypeEnum.Kerosene:
 				if(_lamp.KeroseseneLevel < 100)
 				{
-                    _lamp.FillUp();
-                    foreach (Interactable key in items.Keys)
-                    {
-                        if(key.Type == InteractableTypeEnum.Kerosene)
+					_lamp.FillUp();
+					foreach (Interactable key in items.Keys)
+					{
+						if(key.Type == InteractableTypeEnum.Kerosene)
 						{
 							items[key]--;
 							if (items[key] <= 0)
 							{
-                                items.Remove(key);
-                            }
-                            break;
-                        }
-                    }
-                }
+								items.Remove(key);
+							}
+       							break;
+						}
+					}
+				}
+    				else
+				{
+					Debug.Log("Lampa jest już napełniona");
+				}
 				break;
 		}
 
-		OpenInventory(); // Refreshing inventory
+			OpenInventory(); // Refreshing inventory
 	}
 
 	public void OpenInventory()
@@ -97,7 +101,7 @@ public class PlayerInventory : MonoBehaviour
 			newItem.GetComponent<Button>().onClick.AddListener(() => gameObject.GetComponent<PlayerInventory>().UseItem(inventoryItem));
 
 			if (items[item] > 1)
-                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name + " (�" + items[item] + ")";
+                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name + " (×" + items[item] + ")";
 			else
                 newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
         }
