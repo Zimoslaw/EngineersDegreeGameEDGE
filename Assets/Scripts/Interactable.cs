@@ -16,9 +16,10 @@ public class Interactable : MonoBehaviour
 
 	public string Name = "interactable";
 	public InteractableTypeEnum Type = InteractableTypeEnum.Note;
-	public int State = 0;
-    public int KeyID = 0; // For keys only
-    public string NoteText = "Lorem ipsum dolor sit amet";
+	public int State = 0; // 0 = closed, 1 = open
+ 	public bool Locked = false; // Does door require a key?
+ 	public int KeyID = 0; // For keys only
+	public string NoteText = "Lorem ipsum dolor sit amet";
 
 	public void Interact(GameObject Player)
 	{
@@ -26,8 +27,26 @@ public class Interactable : MonoBehaviour
 		{
 			case InteractableTypeEnum.Door:
 				if (State == 0) {
-					State = 1;
-				} else
+    					if (Locked) {
+	 					bool keyFound = false;
+						foreach (Interactable item in Player.GetComponent<PlayerInventory>().items.Keys) {
+							if (item.Type == InteractableTypeEnum.Key && item.KeyID == KeyID) {
+       								State = 1;
+	       							Locked = false;
+	       							keyFound = true;
+	       							Player.GetComponent<PlayerInventory>().items.Remove(item);
+	       							break;
+							}
+      						}
+	    					if (!keyFound) {
+	  						Debug.Log("Drzwi wymagają klucza");
+						}
+  					}
+       					else {
+	    					State = 1;
+					}
+				}
+    				else
 				{
 					State = 0;
 				}
