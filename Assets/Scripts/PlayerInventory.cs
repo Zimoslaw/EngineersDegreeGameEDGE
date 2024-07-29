@@ -59,8 +59,8 @@ public class PlayerInventory : MonoBehaviour
 				}
     				else
 				{
-					Debug.Log("Lampa jest już napełniona");
-				}
+                    gameObject.GetComponent<Subtitles>().ShowMessage("Lampa jest już napełniona", 0);
+                }
 				break;
 		}
 
@@ -83,7 +83,7 @@ public class PlayerInventory : MonoBehaviour
 		{
 			GameObject newItem = Instantiate(_inventoryItem);
 			newItem.transform.SetParent(_inventoryBackground.transform, false);
-			newItem.GetComponent<RectTransform>().localPosition = new Vector3(-420, yPos-=36, 0);
+			newItem.GetComponent<RectTransform>().localPosition = new Vector3(-420, yPos-=48, 0);
 
             InventoryItem inventoryItem = newItem.AddComponent<InventoryItem>();
 

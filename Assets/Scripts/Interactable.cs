@@ -26,27 +26,30 @@ public class Interactable : MonoBehaviour
 		switch (Type)
 		{
 			case InteractableTypeEnum.Door:
-				if (State == 0) {
-    					if (Locked) {
+				if (State == 0)
+				{
+    				if (Locked)
+					{
 	 					bool keyFound = false;
 						foreach (Interactable item in Player.GetComponent<PlayerInventory>().items.Keys) {
 							if (item.Type == InteractableTypeEnum.Key && item.KeyID == KeyID) {
-       								State = 1;
-	       							Locked = false;
-	       							keyFound = true;
-	       							Player.GetComponent<PlayerInventory>().items.Remove(item);
-	       							break;
+       							State = 1;
+	       						Locked = false;
+	       						keyFound = true;
+	       						Player.GetComponent<PlayerInventory>().items.Remove(item);
+	       						break;
 							}
-      						}
-	    					if (!keyFound) {
-	  						Debug.Log("Drzwi wymagają klucza");
+      					}
+	    				if (!keyFound) {
+							Player.GetComponent<Subtitles>().ShowMessage("Drzwi wymagają klucza", 1);
 						}
   					}
-       					else {
-	    					State = 1;
+       				else
+					{
+	    				State = 1;
 					}
 				}
-    				else
+    			else
 				{
 					State = 0;
 				}
