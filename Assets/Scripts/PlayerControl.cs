@@ -9,127 +9,142 @@ using UnityEngine.Scripting.APIUpdating;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerControl : MonoBehaviour
 {
-	[SerializeField] private float _movementSpeed = 60;
-	[SerializeField] private float _rotationSpeed = 4;
-	[SerializeField] private float _cameraSmoothness = 10f;
+    [SerializeField] private float _movementSpeed = 60;
+    [SerializeField] private float _rotationSpeed = 4;
+    [SerializeField] private float _cameraSmoothness = 10f;
 
-	[SerializeField] private Vector3 _cameraPositionOffset = new(0, 1.7f, 0);
+    [SerializeField] private Vector3 _cameraPositionOffset = new(0, 1.7f, 0);
 
-	// Angle constraints for X axis rotation
-	[SerializeField] private float[] _cameraRotationVerticalConstraints = { 70f, 270f };
+    // Angle constraints for X axis rotation
+    [SerializeField] private float[] _cameraRotationVerticalConstraints = { 70f, 270f };
 
 
-	[SerializeField] private Camera _playerCamera;
-	[SerializeField] private Transform _playerLamp;
+    [SerializeField] private Camera _playerCamera;
+    [SerializeField] private Transform _playerLamp;
 
-	// Lerping targets
-	private Quaternion _cameraTarget;
-	private Quaternion _playerTarget;
-	[SerializeField] private Transform _lampTarget;
+    // Lerping targets
+    private Quaternion _cameraTarget;
+    private Quaternion _playerTarget;
+    [SerializeField] private Transform _lampTarget;
 
-	private Rigidbody _rigidBody;
+    private Rigidbody _rigidBody;
 
-	public TextMeshProUGUI test;
+    private float _sprintTimer = 0;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		_rigidBody = gameObject.GetComponent<Rigidbody>();
+    // Start is called before the first frame update
+    void Start()
+    {
+        _rigidBody = gameObject.GetComponent<Rigidbody>();
 
-		if (_playerCamera.IsUnityNull())
-			_playerCamera = Camera.main;
+        if (_playerCamera.IsUnityNull())
+            _playerCamera = Camera.main;
 
-		_cameraTarget = _playerCamera.transform.rotation;
-		_playerTarget = transform.rotation;
-	}
+        _cameraTarget = _playerCamera.transform.rotation;
+        _playerTarget = transform.rotation;
+    }
 
-	// Update is called once per frame
-	void FixedUpdate()
-	{
-		// Cannot move if player is reading a note
-		if (!_playerCamera.gameObject.GetComponent<InteractionController>().IsReadingNote &&
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        // Cannot move if player is reading a note
+        if (!_playerCamera.gameObject.GetComponent<InteractionController>().IsReadingNote &&
             !_playerCamera.gameObject.GetComponent<InteractionController>().IsInventoryOpen)
-		{
+        {
             CameraMove();
 
             Move();
 
             LampMove();
         }
-		
-		
-		//test.text = "" + _rigidBody.velocity;
-	}
+    }
 
-	// Camera rotation and movement
-	private void CameraMove()
-	{
-		// Mouse Input
-		float deltaXRotation = Input.GetAxis("Mouse Y") * _rotationSpeed;
-		float deltaYRotation = Input.GetAxis("Mouse X") * _rotationSpeed;
+    // Camera rotation and movement
+    private void CameraMove()
+    {
+        // Mouse Input
+        float deltaXRotation = Input.GetAxis("Mouse Y") * _rotationSpeed;
+        float deltaYRotation = Input.GetAxis("Mouse X") * _rotationSpeed;
 
-		// Calculating target rotation
-		Vector3 newCameraRotation = _cameraTarget.eulerAngles + new Vector3(deltaXRotation, deltaYRotation, 0);
-		Vector3 newPlayerRotation = _playerTarget.eulerAngles + new Vector3(0, deltaYRotation, 0);
+        // Calculating target rotation
+        Vector3 newCameraRotation = _cameraTarget.eulerAngles + new Vector3(deltaXRotation, deltaYRotation, 0);
+        //Vector3 newPlayerRotation = _playerTarget.eulerAngles + new Vector3(0, deltaYRotation, 0);
 
-		// Rotating player (Y axis)
-		_playerTarget.eulerAngles = newPlayerRotation;
-		transform.localRotation = Quaternion.Slerp(transform.localRotation, _playerTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
+        // Rotating player (Y axis)
+        //_playerTarget.eulerAngles = newPlayerRotation;
+        //transform.localRotation = Quaternion.Slerp(transform.localRotation, _playerTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
 
-		// Checking rotation angles constraints
-		if (newCameraRotation.x > _cameraRotationVerticalConstraints[0] && newCameraRotation.x < _cameraRotationVerticalConstraints[1])
-			newCameraRotation.x = _cameraTarget.eulerAngles.x;
+        // Checking rotation angles constraints
+        if (newCameraRotation.x > _cameraRotationVerticalConstraints[0] && newCameraRotation.x < _cameraRotationVerticalConstraints[1])
+            newCameraRotation.x = _cameraTarget.eulerAngles.x;
 
-		// Rotating camera (X axis)
-		_cameraTarget.eulerAngles = newCameraRotation;
-		_playerCamera.transform.localRotation = Quaternion.Slerp(_playerCamera.transform.localRotation, _cameraTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
-	}
+        // Rotating camera (X axis)
+        _cameraTarget.eulerAngles = newCameraRotation;
+        _playerCamera.transform.localRotation = Quaternion.Slerp(_playerCamera.transform.localRotation, _cameraTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
 
-	// Player movement
-	private void Move()
-	{
-		float verticalAxis = Input.GetAxis("Vertical");
-		float horizontalAxis = Input.GetAxis("Horizontal");
+        // Rotating player (Y axis)
+        Quaternion newPlayerRotation = _playerCamera.transform.rotation;
+        newPlayerRotation.x = 0;
+        newPlayerRotation.z = 0;
+        transform.rotation = newPlayerRotation;
+    }
 
-		// Slowing down backward movement
-		float backwardsMultiplier = verticalAxis < 0 ? 0.5f : 1f;
-		// Slowing down forward movement (in case of side movement)
-		float forwardMultipllier = horizontalAxis == 0 ? 1f : 0.7f;
+    // Player movement
+    private void Move()
+    {
+        float verticalAxis = Input.GetAxis("Vertical");
+        float horizontalAxis = Input.GetAxis("Horizontal");
 
-		// Slowing down side movement
-		float sideMultiplier = verticalAxis == 0 ? 0.8f : 0.4f;
+        // Slowing down backward movement
+        float backwardsMultiplier = verticalAxis < 0 ? 0.5f : 1f;
+        // Slowing down forward movement (in case of side movement)
+        float forwardMultipllier = horizontalAxis == 0 ? 1f : 0.7f;
 
-		// For constraining max movement speed
-		float currentSpeed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
+        // Slowing down side movement
+        float sideMultiplier = verticalAxis == 0 ? 0.8f : 0.4f;
 
-  		// Sprinting (only for forward movement)
-    		float sprintMultiplier = 1;
-    		if (verticalAxis > 0 && Input.GetKey(KeyCode.LeftShift))
-      			sprintMultiplier = 2;
+        // For constraining max movement speed
+        float currentSpeed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
 
-		_rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * (2 * _movementSpeed *  sprintMultiplier - (currentSpeed * 50)) * verticalAxis * transform.forward);
+        // Sprinting (only for forward movement, for max 10 seconds)
+        float sprintMultiplier = 1;
+        if (verticalAxis > 0 && horizontalAxis == 0 && Input.GetKey(KeyCode.LeftShift))
+        {
+            _sprintTimer += Time.deltaTime;
+            if (_sprintTimer < 10)
+                sprintMultiplier = 2;
+        }
+        else
+        {
+            if (_sprintTimer > 0)
+                _sprintTimer -= Time.deltaTime;
+            else
+                _sprintTimer = 0;
+        }
+            
 
-		_rigidBody.AddForce(sideMultiplier * _movementSpeed * (100 - (currentSpeed * 50)) * horizontalAxis * transform.right);
+        _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * (2 * _movementSpeed * sprintMultiplier - (currentSpeed * 50)) * verticalAxis * transform.forward);
 
-		// Move camera
-		_playerCamera.transform.position = transform.position + _cameraPositionOffset;
-	}
+        _rigidBody.AddForce(sideMultiplier * _movementSpeed * (100 - (currentSpeed * 50)) * horizontalAxis * transform.right);
 
-	// Lamp smooth movement
-	private void LampMove()
-	{
-		if(!_playerLamp.IsUnityNull())
-		{
-			_playerLamp.position = _lampTarget.position;
+        // Move camera
+        _playerCamera.transform.position = transform.position + _cameraPositionOffset;
+    }
 
-			Quaternion newLampRotation = _lampTarget.rotation;
+    // Lamp smooth movement
+    private void LampMove()
+    {
+        if(!_playerLamp.IsUnityNull())
+        {
+            _playerLamp.position = _lampTarget.position;
 
-			if (newLampRotation.eulerAngles.x > 310)
-			{
-				newLampRotation = Quaternion.Euler(_playerLamp.rotation.eulerAngles.x, _lampTarget.rotation.eulerAngles.y, _lampTarget.rotation.eulerAngles.z);
-			}
+            Quaternion newLampRotation = _lampTarget.rotation;
 
-			_playerLamp.rotation = Quaternion.Slerp(_playerLamp.rotation, newLampRotation, 25 * Time.deltaTime);
-		}
-	}
+            if (newLampRotation.eulerAngles.x > 310)
+            {
+                newLampRotation = Quaternion.Euler(_playerLamp.rotation.eulerAngles.x, _lampTarget.rotation.eulerAngles.y, _lampTarget.rotation.eulerAngles.z);
+            }
+
+            _playerLamp.rotation = Quaternion.Slerp(_playerLamp.rotation, newLampRotation, 25 * Time.deltaTime);
+        }
+    }
 }

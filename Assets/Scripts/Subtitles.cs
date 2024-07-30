@@ -57,8 +57,14 @@ public class Subtitles : MonoBehaviour
 
 		// Background width and height
 		int width = message.Length * 20;
+		if (width < 120)
+			width = 120;
+		if (width > 1800)
+			width = 1800;
+
   		int height = message.Length > 100? 100 : 50;
-        _background.rectTransform.sizeDelta = width <= 120? new Vector2(120, 50) : new Vector2(width, height);
+
+        _background.rectTransform.sizeDelta = new Vector2(width, height);
 		
 
         _background.gameObject.SetActive(true);
