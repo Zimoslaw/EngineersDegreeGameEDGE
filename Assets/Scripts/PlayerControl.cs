@@ -102,7 +102,12 @@ public class PlayerControl : MonoBehaviour
 		// For constraining max movement speed
 		float currentSpeed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
 
-		_rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * verticalAxis * transform.forward);
+  		// Sprinting (only for forward movement)
+    		float sprintMultiplier = 1;
+    		if (verticalAxis > 0 && Input.GetKey(KeyCode.LeftShift))
+      			sprintMultiplier = 2;
+
+		_rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * (2 * _movementSpeed *  sprintMultiplier - (currentSpeed * 50)) * verticalAxis * transform.forward);
 
 		_rigidBody.AddForce(sideMultiplier * _movementSpeed * (100 - (currentSpeed * 50)) * horizontalAxis * transform.right);
 
