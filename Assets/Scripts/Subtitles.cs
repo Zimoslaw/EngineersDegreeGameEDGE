@@ -55,9 +55,11 @@ public class Subtitles : MonoBehaviour
 		// Color choosen by type
 		_text.color = _textColors[type];
 
-		// Background width
+		// Background width and height
 		int width = message.Length * 20;
-        _background.rectTransform.sizeDelta = width <= 120? new Vector2(120, 50) : new Vector2(width, 50);
+  		int height = message.Length > 100? 100 : 50;
+        _background.rectTransform.sizeDelta = width <= 120? new Vector2(120, 50) : new Vector2(width, height);
+		
 
         _background.gameObject.SetActive(true);
 		_text.text = message;
