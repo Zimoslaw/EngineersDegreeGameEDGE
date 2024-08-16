@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: panelling
-    second: {fileID: 2100000, guid: 83e4a48ed757d274886eecb59260b96a, type: 2}
+    second: {fileID: 2100000, guid: e5541d5aa976684458bd59e441d1cbb5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: wallpaper
-    second: {fileID: 2100000, guid: a3fad39336a3f254c8e83b8c3af9cffc, type: 2}
+    second: {fileID: 2100000, guid: aae3ed7ad1bba2c4f9a59774c763dbb7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

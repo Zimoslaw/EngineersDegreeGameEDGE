@@ -62,8 +62,8 @@ public class PlayerControl : MonoBehaviour
     private void CameraMove()
     {
         // Mouse Input
-        float deltaXRotation = Input.GetAxis("Mouse Y") * _rotationSpeed;
-        float deltaYRotation = Input.GetAxis("Mouse X") * _rotationSpeed;
+        float deltaXRotation = Input.GetAxis("Camera Y") * _rotationSpeed;
+        float deltaYRotation = Input.GetAxis("Camera X") * _rotationSpeed;
 
         // Calculating target rotation
         Vector3 newCameraRotation = _cameraTarget.eulerAngles + new Vector3(deltaXRotation, deltaYRotation, 0);

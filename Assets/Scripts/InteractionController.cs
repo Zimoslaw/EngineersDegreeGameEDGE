@@ -19,7 +19,7 @@ public class InteractionController : MonoBehaviour
     {
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2f, Color.blue);
 
-        if (Input.GetKeyDown(KeyCode.E) && IsReadingNote)
+        if (Input.GetButtonDown("Cancel") && IsReadingNote)
         {
             HideNote();
         }
@@ -64,9 +64,9 @@ public class InteractionController : MonoBehaviour
                             break;
                     }
 
-                    _interactableAction.text = "[E] " + action;
+                    _interactableAction.text = "[LPM] " + action;
 
-                    if(Input.GetKeyDown(KeyCode.E) && !IsInventoryOpen)
+                    if(Input.GetButtonDown("Interaction") && !IsInventoryOpen)
                     {
                         focusedObject.Interact(gameObject);
                     }
@@ -84,7 +84,7 @@ public class InteractionController : MonoBehaviour
             _interactableAction.text = null;
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetButtonDown("Inventory"))
         {
             if (IsInventoryOpen)
             {

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: wallpaper
+  m_Name: wallpaper-green
   m_Shader: {fileID: 4800000, guid: 0e9d5a909a1f7e84882a534d0d11e49f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -96,7 +96,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.1
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -113,7 +113,7 @@ Material:
     - _Surface: 0
     - _UVSec: 0
     - _UseAoMap: 0
-    - _UseColorMap: 1
+    - _UseColorMap: 0
     - _UseEmissiveMap: 0
     - _UseMetallicMap: 0
     - _UseNormalMap: 1
@@ -122,7 +122,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
-    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _Color: {r: 0, g: 0.4415095, b: 0.19480178, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
