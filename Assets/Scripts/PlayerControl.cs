@@ -124,7 +124,7 @@ public class PlayerControl : MonoBehaviour
 
         _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * (2 * _movementSpeed * sprintMultiplier - (currentSpeed * 50)) * verticalAxis * transform.forward);
 
-        _rigidBody.AddForce(sideMultiplier * _movementSpeed * (100 - (currentSpeed * 50)) * horizontalAxis * transform.right);
+        _rigidBody.AddForce(sideMultiplier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * horizontalAxis * transform.right);
 
         // Move camera
         _playerCamera.transform.position = transform.position + _cameraPositionOffset;
