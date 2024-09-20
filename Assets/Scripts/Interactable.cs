@@ -20,12 +20,19 @@ public class Interactable : MonoBehaviour
     public bool Locked = false; // Does door require a key?
     public int KeyID = 0; // For keys only
     public string NoteText = "Lorem ipsum dolor sit amet";
+    public Animator Animator;
+    public string OpeningAnimation = "open";
+    public string ClosingAnimation = "close";
+    public Collider Collider;
 
     public void Interact(GameObject Player)
     {
         switch (Type)
         {
             case InteractableTypeEnum.Door:
+                if(Animator.GetCurrentAnimatorStateInfo(0).length > Animator.GetCurrentAnimatorStateInfo(0).normalizedTime)
+                    break;
+
                 if (State == 0)
                 {
                     if (Locked)
@@ -33,6 +40,8 @@ public class Interactable : MonoBehaviour
                         bool keyFound = false;
                         foreach (Interactable item in Player.GetComponent<PlayerInventory>().items.Keys) {
                             if (item.Type == InteractableTypeEnum.Key && item.KeyID == KeyID) {
+                                Animator.Play(OpeningAnimation);
+                                Collider.isTrigger = true;
                                 State = 1;
                                 Locked = false;
                                 keyFound = true;
@@ -46,12 +55,16 @@ public class Interactable : MonoBehaviour
                     }
                     else
                     {
-                        State = 1;
+						Animator.Play(OpeningAnimation);
+						Collider.isTrigger = true;
+						State = 1;
                     }
                 }
                 else
                 {
-                    State = 0;
+					Animator.Play(ClosingAnimation);
+					Collider.isTrigger = false;
+					State = 0;
                 }
                 break;
             case InteractableTypeEnum.Light:
