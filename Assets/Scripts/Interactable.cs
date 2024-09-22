@@ -11,7 +11,8 @@ public class Interactable : MonoBehaviour
         Door,
         Key,
         Light,
-        Kerosene
+        Kerosene,
+        Info
     }
 
     public string Name = "interactable";
@@ -87,6 +88,8 @@ public class Interactable : MonoBehaviour
                 break;
             case InteractableTypeEnum.Note:
                 Player.GetComponent<InteractionController>().ShowNote(NoteText);
+                break;
+            case InteractableTypeEnum.Info:
                 break;
         }
     }

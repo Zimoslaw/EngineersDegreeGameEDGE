@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4615524841822863983
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6977204
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.0420005
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_Name
+      value: kerosene-can
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3317674173433150278}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e9e103ad925015f4f8680cdf9baefe5a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 893365535851696385}
+  m_SourcePrefab: {fileID: 100100000, guid: e9e103ad925015f4f8680cdf9baefe5a, type: 3}
+--- !u!1 &5534020909542342462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e9e103ad925015f4f8680cdf9baefe5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4615524841822863983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3317674173433150278
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534020909542342462}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3, y: 0.354365, z: 0.3}
+  m_Center: {x: 0, y: 0.18718249, z: -0.029880606}
+--- !u!114 &893365535851696385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534020909542342462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef6676126f83674fb91733005850a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Nafta
+  Type: 4
+  State: 0
+  Locked: 0
+  KeyID: 0
+  NoteText: Lorem ipsum dolor sit amet
+  Animator: {fileID: 0}
+  OpeningAnimation: open
+  ClosingAnimation: close
+  Collider: {fileID: 0}

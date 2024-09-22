@@ -82,6 +82,10 @@ public class PlayerInventory : MonoBehaviour
         foreach (Interactable item in items.Keys)
         {
             GameObject newItem = Instantiate(_inventoryItem);
+            // In case of key, button is disabled
+            if (item.Type == InteractableTypeEnum.Key)
+                newItem.GetComponent<Button>().interactable = false;
+
             newItem.transform.SetParent(_inventoryBackground.transform, false);
             newItem.GetComponent<RectTransform>().localPosition = new Vector3(-420, yPos-=48, 0);
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerInventory))]
@@ -31,44 +32,48 @@ public class InteractionController : MonoBehaviour
                 {
                     _interactableName.text = focusedObject.Name;
 
-                    string action = "";
-                    switch (focusedObject.Type)
+                    if (focusedObject.Type != Interactable.InteractableTypeEnum.Info)
                     {
-                        case Interactable.InteractableTypeEnum.Note:
-                            action = "Przeczytaj";
-                            break;
-                        case Interactable.InteractableTypeEnum.Kerosene:
-                            action = "Zabierz";
-                            break;
-                        case Interactable.InteractableTypeEnum.Key:
-                            action = "Zabierz";
-                            break;
-                        case Interactable.InteractableTypeEnum.Light:
-                            if (focusedObject.State == 0)
-                            {
-                                action = "Zapal";
-                            }
-                            else
-                            {
-                                action = "Zgaś";
-                            }
-                            break;
-                        case Interactable.InteractableTypeEnum.Door:
-                            if (focusedObject.State == 0)
-                            {
-                                action = "Otwórz";
-                            } else
-                            {
-                                action = "Zamknij";
-                            }
-                            break;
-                    }
+                        string action = "";
+                        switch (focusedObject.Type)
+                        {
+                            case Interactable.InteractableTypeEnum.Note:
+                                action = "Przeczytaj";
+                                break;
+                            case Interactable.InteractableTypeEnum.Kerosene:
+                                action = "Zabierz";
+                                break;
+                            case Interactable.InteractableTypeEnum.Key:
+                                action = "Zabierz";
+                                break;
+                            case Interactable.InteractableTypeEnum.Light:
+                                if (focusedObject.State == 0)
+                                {
+                                    action = "Zapal";
+                                }
+                                else
+                                {
+                                    action = "Zgaś";
+                                }
+                                break;
+                            case Interactable.InteractableTypeEnum.Door:
+                                if (focusedObject.State == 0)
+                                {
+                                    action = "Otwórz";
+                                }
+                                else
+                                {
+                                    action = "Zamknij";
+                                }
+                                break;
+                        }
 
-                    _interactableAction.text = "[LPM] " + action;
+                        _interactableAction.text = "[LPM] " + action;
 
-                    if(Input.GetButtonDown("Interaction") && !IsInventoryOpen)
-                    {
-                        focusedObject.Interact(gameObject);
+                        if (Input.GetButtonDown("Interaction") && !IsInventoryOpen)
+                        {
+                            focusedObject.Interact(gameObject);
+                        }
                     }
                 }
             }

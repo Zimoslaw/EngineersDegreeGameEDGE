@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9030580655193449961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2429998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.7630005
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_Name
+      value: note
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8037243572258015233}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8807127249579226876}
+  m_SourcePrefab: {fileID: 100100000, guid: 2c3cdb23f78c32b40b1856b4a003ca99, type: 3}
+--- !u!1 &8183736047257835704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c3cdb23f78c32b40b1856b4a003ca99,
+    type: 3}
+  m_PrefabInstance: {fileID: 9030580655193449961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8037243572258015233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183736047257835704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef6676126f83674fb91733005850a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: "Notatka na pod\u0142odze"
+  Type: 0
+  State: 0
+  Locked: 0
+  KeyID: 0
+  NoteText: "    Wczoraj Nigger-man, kt\xF3rego nastroje znam doskonale, dziwnie
+    si\u0119 zachowywa\u0142. Nagle zje\u017Cy\u0142 si\u0119 w czujnym pogotowiu,
+    i to tak bardzo, \u017Ce zgo\u0142a nie licowa\u0142o to z jego usposobieniem.
+    Targany niepokojem j\u0105\u0142 przemierza\u0107 komnat\u0119 za komnat\u0105,
+    nieustannie obw\u0105chuj\u0105c \u015Bciany po cz\u0119\u015Bci sk\u0142adaj\u0105ce
+    si\u0119 z pierwotnych, gotyckich mur\xF3w. Dzi\u015B rano jeden ze s\u0142u\u017C\u0105cych
+    poskar\u017Cy\u0142 si\u0119, \u017Ce wszystkie koty zachowuj\u0105 si\u0119
+    bardzo niespokojnie"
+  Animator: {fileID: 0}
+  OpeningAnimation: open
+  ClosingAnimation: close
+  Collider: {fileID: 0}
+--- !u!65 &8807127249579226876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183736047257835704}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19702017, y: 0.070701405, z: 0.25531876}
+  m_Center: {x: 0.00044709444, y: 0.007983722, z: 0.0021446347}
