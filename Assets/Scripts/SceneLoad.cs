@@ -30,7 +30,6 @@ public class SceneLoad : MonoBehaviour
     private bool load = false;
     private float timer = 0;
 
-    // Update is called once per frame
     void Update()
     {
         if (preLoad)
@@ -68,10 +67,17 @@ public class SceneLoad : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("wykryta kolizja");
         if (collider.CompareTag("Player"))
         {
-            Debug.Log("Kolizja z grazem");
+            if (playerCamera.IsUnityNull())
+                playerCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<InteractionController>();
+
+            if (loadingImageObject.IsUnityNull())
+                loadingImageObject = GameObject.FindGameObjectWithTag("LoadingImage");
+
+            if (loadingTextObject.IsUnityNull())
+                loadingTextObject = GameObject.FindGameObjectWithTag("LoadingText").GetComponent<TextMeshProUGUI>();
+
             playerCamera.IsReadingNote= true;
             loadingImageObject.SetActive(true);
             preLoad = true;

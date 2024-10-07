@@ -46,7 +46,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Cannot move if player is reading a note
+        // Cannot move if playerObkects is reading a note
         if (!_playerCamera.gameObject.GetComponent<InteractionController>().IsReadingNote &&
             !_playerCamera.gameObject.GetComponent<InteractionController>().IsInventoryOpen)
         {
@@ -69,7 +69,7 @@ public class PlayerControl : MonoBehaviour
         Vector3 newCameraRotation = _cameraTarget.eulerAngles + new Vector3(deltaXRotation, deltaYRotation, 0);
         //Vector3 newPlayerRotation = _playerTarget.eulerAngles + new Vector3(0, deltaYRotation, 0);
 
-        // Rotating player (Y axis)
+        // Rotating playerObkects (Y axis)
         //_playerTarget.eulerAngles = newPlayerRotation;
         //transform.localRotation = Quaternion.Slerp(transform.localRotation, _playerTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
 
@@ -81,7 +81,7 @@ public class PlayerControl : MonoBehaviour
         _cameraTarget.eulerAngles = newCameraRotation;
         _playerCamera.transform.localRotation = Quaternion.Slerp(_playerCamera.transform.localRotation, _cameraTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
 
-        // Rotating player (Y axis)
+        // Rotating playerObkects (Y axis)
         Quaternion newPlayerRotation = _playerCamera.transform.rotation;
         newPlayerRotation.x = 0;
         newPlayerRotation.z = 0;
