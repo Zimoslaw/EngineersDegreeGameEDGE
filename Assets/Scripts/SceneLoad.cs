@@ -78,7 +78,7 @@ public class SceneLoad : MonoBehaviour
             if (loadingTextObject.IsUnityNull())
                 loadingTextObject = GameObject.FindGameObjectWithTag("LoadingText").GetComponent<TextMeshProUGUI>();
 
-            playerCamera.IsReadingNote= true;
+            playerCamera.IsReadingNote = true;
             loadingImageObject.SetActive(true);
             preLoad = true;
         }

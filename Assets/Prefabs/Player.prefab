@@ -237,7 +237,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 29
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -6734,8 +6734,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270, y: -482}
-  m_SizeDelta: {x: 196, y: 50}
+  m_AnchoredPosition: {x: 260, y: -482}
+  m_SizeDelta: {x: 195, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2794220401813664205
 CanvasRenderer:
@@ -6767,7 +6767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "[ESC] aby wyj\u015B\u0107"
+  m_text: "[PPM] aby wyj\u015B\u0107"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6830,7 +6830,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -5.465561, w: -35.753174}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7087,6 +7087,11 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2358798611677648923, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3044877522491652636, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
       propertyPath: m_Color.a
@@ -7147,10 +7152,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6049818301641115977, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525982709492220016, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 195
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525982709492220016, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 260
+      objectReference: {fileID: 0}
     - target: {fileID: 7169682446561330489, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
       propertyPath: m_TagString
       value: LoadingText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759718815599862140, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866545238036342651, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_text
+      value: "[PPM] aby wyj\u015B\u0107"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866545238036342651, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_margin.w
+      value: -35.753174
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866545238036342651, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -5.465561
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866545238036342651, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
