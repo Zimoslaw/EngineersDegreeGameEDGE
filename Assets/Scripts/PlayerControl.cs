@@ -77,7 +77,7 @@ public class PlayerControl : MonoBehaviour
         if (newCameraRotation.x > _cameraRotationVerticalConstraints[0] && newCameraRotation.x < _cameraRotationVerticalConstraints[1])
             newCameraRotation.x = _cameraTarget.eulerAngles.x;
 
-        // Rotating camera (X axis)
+        // Rotating cameraObject (X axis)
         _cameraTarget.eulerAngles = newCameraRotation;
         _playerCamera.transform.localRotation = Quaternion.Slerp(_playerCamera.transform.localRotation, _cameraTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
 
@@ -126,7 +126,7 @@ public class PlayerControl : MonoBehaviour
 
         _rigidBody.AddForce(sideMultiplier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * horizontalAxis * transform.right);
 
-        // Move camera
+        // Move cameraObject
         _playerCamera.transform.position = transform.position + _cameraPositionOffset;
     }
 

@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class StartTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private string sceneToLoad = "Start";
+
     void Start()
     {
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
