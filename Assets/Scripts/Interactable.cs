@@ -25,6 +25,7 @@ public class Interactable : MonoBehaviour
     public string OpeningAnimation = "open";
     public string ClosingAnimation = "close";
     public Collider Collider;
+    public int amount = 1; // for inventory
 
     public void Interact(GameObject Player)
     {
@@ -39,7 +40,7 @@ public class Interactable : MonoBehaviour
                     if (Locked)
                     {
                         bool keyFound = false;
-                        foreach (Interactable item in Player.GetComponent<PlayerInventory>().items.Keys) {
+                        foreach (Interactable item in Player.GetComponent<PlayerInventory>().items) {
                             if (item.Type == InteractableTypeEnum.Key && item.KeyID == KeyID) {
                                 Animator.Play(OpeningAnimation);
                                 Collider.isTrigger = true;

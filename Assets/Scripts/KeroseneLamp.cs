@@ -32,6 +32,8 @@ public class KeroseneLamp : MonoBehaviour
 
         _veryLowIntesities[0] = _lights[0].intensity * 0.1f;
         _veryLowIntesities[1] = _lights[1].intensity * 0.1f;
+
+        KeroseseneLevel = PlayerPrefs.GetInt("KeroseneLevel");
     }
 
     void Update()

@@ -808,6 +808,7 @@ MonoBehaviour:
   OpeningAnimation: open
   ClosingAnimation: close
   Collider: {fileID: 0}
+  amount: 1
 --- !u!65 &124016029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8506,7 +8507,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &819778474
@@ -15401,7 +15402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1446601667
 Animator:
   serializedVersion: 5
@@ -16864,6 +16865,7 @@ MonoBehaviour:
   OpeningAnimation: open
   ClosingAnimation: close
   Collider: {fileID: 0}
+  amount: 1
 --- !u!65 &1545489349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20322,6 +20324,7 @@ MonoBehaviour:
   OpeningAnimation: open
   ClosingAnimation: close
   Collider: {fileID: 1797095130}
+  amount: 1
 --- !u!95 &1797095132
 Animator:
   serializedVersion: 5
@@ -22611,6 +22614,7 @@ MonoBehaviour:
   OpeningAnimation: open
   ClosingAnimation: close
   Collider: {fileID: 0}
+  amount: 1
 --- !u!65 &2021044279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29435,36 +29439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1105358424986752527, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226616083263258586, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5424412184463828994, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5462524223127970379, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_VolumeTrigger
       value: 
       objectReference: {fileID: 832575519}
-    - target: {fileID: 5907077810675120328, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6363459521459097910, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6669651956822868734, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29515,20 +29494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8512815898028052427, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+    - target: {fileID: 9108023554925762199, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
-      propertyPath: m_CastShadows
+      propertyPath: _clearInvenotryOnStart
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010593533364850639, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 195
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010593533364850639, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 260
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

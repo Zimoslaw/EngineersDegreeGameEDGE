@@ -1,38 +1,69 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static Interactable;
 using static UnityEditor.Progress;
 
+[Serializable]
 public class PlayerInventory : MonoBehaviour
 {
 
-    public Dictionary<Interactable, int> items = new();
+    public List<Interactable> items = new();
 
     [SerializeField] private GameObject _player;
     [SerializeField] private KeroseneLamp _lamp;
     [SerializeField] private GameObject _inventoryBackground;
     [SerializeField] private GameObject _inventoryItem;
+    [SerializeField] private bool _clearInvenotryOnStart = false;
+
+    void Start()
+    {
+        // Add saved items into the inventory (or clear saved inventory id needed)
+        if (File.Exists(Application.persistentDataPath + "/inventory.json"))
+        {
+            if (_clearInvenotryOnStart)
+            {
+                File.Delete(Application.persistentDataPath + "/inventory.json");
+            }
+            else
+            {
+                foreach (string line in File.ReadAllLines(Application.persistentDataPath + "/inventory.json"))
+                {
+                    if (line != "")
+                    {
+                        // Temporary data for lading items into inventory
+                        GameObject itemObject = new();
+                        Interactable item = itemObject.AddComponent<Interactable>();
+
+                        JsonUtility.FromJsonOverwrite(line, item);
+                        item.Interact(gameObject);
+                    }
+                }
+            }
+        }
+    }
 
     public void PutItem(Interactable item)
     {
         if (item.Type == InteractableTypeEnum.Kerosene)
         {
-            foreach (Interactable key in items.Keys)
+            foreach (Interactable listItem in items)
             {
-                if (key.Type == InteractableTypeEnum.Kerosene)
+                if (listItem.Type == InteractableTypeEnum.Kerosene)
                 {
-                    items[key]++;
+                    listItem.amount++;
                     return;
                 }
             }
-            items.Add(item, 1);
+            items.Add(item);
         }
         else
         {
-            items.Add(item, 1);
+            items.Add(item);
         }
     }
 
@@ -44,14 +75,14 @@ public class PlayerInventory : MonoBehaviour
                 if(_lamp.KeroseseneLevel < 100)
                 {
                     _lamp.FillUp();
-                    foreach (Interactable key in items.Keys)
+                    foreach (Interactable listItem in items)
                     {
-                        if(key.Type == InteractableTypeEnum.Kerosene)
+                        if(listItem.Type == InteractableTypeEnum.Kerosene)
                         {
-                            items[key]--;
-                            if (items[key] <= 0)
+                            listItem.amount--;
+                            if (listItem.amount <= 0)
                             {
-                                items.Remove(key);
+                                items.Remove(listItem);
                             }
                                 break;
                         }
@@ -79,7 +110,7 @@ public class PlayerInventory : MonoBehaviour
         }
 
         // Displaying items
-        foreach (Interactable item in items.Keys)
+        foreach (Interactable item in items)
         {
             GameObject newItem = Instantiate(_inventoryItem);
             // In case of key, button is disabled
@@ -104,8 +135,8 @@ public class PlayerInventory : MonoBehaviour
 
             newItem.GetComponent<Button>().onClick.AddListener(() => UseItem(inventoryItem));
 
-            if (items[item] > 1)
-                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name + " (×" + items[item] + ")";
+            if (item.amount > 1)
+                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name + " (×" + item.amount + ")";
             else
                 newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
         }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.SearchService;
@@ -65,7 +67,7 @@ public class SceneLoad : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
@@ -81,6 +83,16 @@ public class SceneLoad : MonoBehaviour
             playerCamera.IsReadingNote = true;
             loadingImageObject.SetActive(true);
             preLoad = true;
+
+            // Saving player data
+            PlayerPrefs.SetInt("KeroseneLevel", GameObject.FindGameObjectWithTag("PlayerLamp").GetComponent<KeroseneLamp>().KeroseseneLevel);
+            string inventoryData = "";
+            foreach (Interactable item in GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerInventory>().items)
+            {
+                inventoryData += JsonUtility.ToJson(item) + Environment.NewLine;
+            }
+            File.WriteAllText(Application.persistentDataPath + "/inventory.json", inventoryData);
+            //Debug.Log(inventoryData);
         }
     }
 }

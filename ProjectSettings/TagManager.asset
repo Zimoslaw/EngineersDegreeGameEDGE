@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - LoadingImage
   - LoadingText
+  - PlayerLamp
   layers:
   - Default
   - TransparentFX

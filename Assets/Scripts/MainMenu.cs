@@ -11,6 +11,12 @@ public class MainMenu : MonoBehaviour
 
     public PlayableDirector timeline;
 
+    void Start()
+    {
+        // Reseting all saved data
+        PlayerPrefs.SetInt("KeroseneLevel", 100);
+    }
+
     public void PlayGame()
     {
         Cursor.visible = false;
