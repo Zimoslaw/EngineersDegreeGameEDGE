@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,11 @@ public class MainMenu : MonoBehaviour
     {
         // Reseting all saved data
         PlayerPrefs.SetInt("KeroseneLevel", 100);
+        PlayerPrefs.SetInt("LabyrinthSeed", -1);
+        if (File.Exists(Application.persistentDataPath + "/inventory.json"))
+        {
+            File.Delete(Application.persistentDataPath + "/inventory.json");
+        }
     }
 
     public void PlayGame()

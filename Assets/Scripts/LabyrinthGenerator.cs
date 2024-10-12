@@ -31,6 +31,8 @@ public class LabyrinthGenerator : MonoBehaviour
         GenerateMazeArray();
 
         InstantiateCells();
+
+        SaveLabyrinth();
     }
 
     /// <summary>
@@ -38,6 +40,17 @@ public class LabyrinthGenerator : MonoBehaviour
     /// </summary>
     void GenerateMazeArray()
     {
+        // Get the seed if it's saved from previous run
+        int seed = PlayerPrefs.GetInt("LabyrinthSeed");
+
+        if (seed == -1) // -1 = not saved
+        {
+            seed = UnityEngine.Random.Range(0, 99999);
+            PlayerPrefs.SetInt("LabyrinthSeed", seed);
+        }
+
+        UnityEngine.Random.InitState(seed);
+
         cells = new Cell[labyrinthSize, labyrinthSize];
         for (int z = 0; z < labyrinthSize; z++)
         {
@@ -224,6 +237,7 @@ public class LabyrinthGenerator : MonoBehaviour
                 }
             } 
         }
+        UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
     }
 
     /// <summary>
@@ -251,5 +265,10 @@ public class LabyrinthGenerator : MonoBehaviour
         byte chosen = neighbours.ElementAt((byte)UnityEngine.Random.Range(0, neighbours.Count));
 
         return chosen;
+    }
+
+    void SaveLabyrinth()
+    {
+        return;
     }
 }

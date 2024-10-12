@@ -18,30 +18,22 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private KeroseneLamp _lamp;
     [SerializeField] private GameObject _inventoryBackground;
     [SerializeField] private GameObject _inventoryItem;
-    [SerializeField] private bool _clearInvenotryOnStart = false;
 
     void Start()
     {
-        // Add saved items into the inventory (or clear saved inventory id needed)
+        // Add saved items into the inventory
         if (File.Exists(Application.persistentDataPath + "/inventory.json"))
         {
-            if (_clearInvenotryOnStart)
+            foreach (string line in File.ReadAllLines(Application.persistentDataPath + "/inventory.json"))
             {
-                File.Delete(Application.persistentDataPath + "/inventory.json");
-            }
-            else
-            {
-                foreach (string line in File.ReadAllLines(Application.persistentDataPath + "/inventory.json"))
+                if (line != "")
                 {
-                    if (line != "")
-                    {
-                        // Temporary data for lading items into inventory
-                        GameObject itemObject = new();
-                        Interactable item = itemObject.AddComponent<Interactable>();
+                    // Temporary data for lading items into inventory
+                    GameObject itemObject = new();
+                    Interactable item = itemObject.AddComponent<Interactable>();
 
-                        JsonUtility.FromJsonOverwrite(line, item);
-                        item.Interact(gameObject);
-                    }
+                    JsonUtility.FromJsonOverwrite(line, item);
+                    item.Interact(gameObject);
                 }
             }
         }

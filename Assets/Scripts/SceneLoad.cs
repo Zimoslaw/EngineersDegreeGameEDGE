@@ -92,7 +92,6 @@ public class SceneLoad : MonoBehaviour
                 inventoryData += JsonUtility.ToJson(item) + Environment.NewLine;
             }
             File.WriteAllText(Application.persistentDataPath + "/inventory.json", inventoryData);
-            //Debug.Log(inventoryData);
         }
     }
 }
