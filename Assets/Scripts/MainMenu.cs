@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            invertYAxisToggle.isOn = PlayerPrefs.GetInt("InvertYAxis") == 0 ? false : true; 
+            invertYAxisToggle.isOn = PlayerPrefs.GetInt("InvertYAxis") != 0; 
         }
 
         if (!PlayerPrefs.HasKey("MouseSensitivity"))

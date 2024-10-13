@@ -13,16 +13,20 @@ public class InteractionController : MonoBehaviour
     [SerializeField] private GameObject _note;
     [SerializeField] private TextMeshProUGUI _noteText;
 
+    public bool IsPaused = false;
     public bool IsReadingNote = false; // Is Player reading a note?
     public bool IsInventoryOpen = false;
 
     void Update()
     {
+        if (IsPaused) return;
+
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2f, Color.blue);
 
-        if (Input.GetButtonDown("Cancel") && IsReadingNote)
+        if (IsReadingNote)
         {
-            HideNote();
+            if (Input.GetButtonDown("Cancel"))
+                HideNote();
         }
         else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, 2f))
         {
@@ -95,12 +99,16 @@ public class InteractionController : MonoBehaviour
             {
                 gameObject.GetComponent<PlayerInventory>().CloseInventory();
                 IsInventoryOpen = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             else
             {
                 HideNote();
                 gameObject.GetComponent<PlayerInventory>().OpenInventory();
                 IsInventoryOpen = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
 

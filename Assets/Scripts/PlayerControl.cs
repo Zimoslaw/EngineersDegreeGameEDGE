@@ -10,9 +10,9 @@ using UnityEngine.Scripting.APIUpdating;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed = 60;
-    [SerializeField] private float _rotationSpeed = 4;
+    public float RotationSpeed = 4;
     [SerializeField] private float _cameraSmoothness = 10f;
-    [SerializeField] private bool _invertYAxis = false;
+    public bool InvertYAxis = false;
 
     [SerializeField] private Vector3 _cameraPositionOffset = new(0, 1.7f, 0);
 
@@ -31,6 +31,9 @@ public class PlayerControl : MonoBehaviour
 
     private float _sprintTimer = 0;
 
+    // Menus UI
+    [SerializeField] private GameObject[] menus;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,14 +45,26 @@ public class PlayerControl : MonoBehaviour
         _cameraTarget = _playerCamera.transform.rotation;
 
         // Set user settings
-        _invertYAxis = PlayerPrefs.GetInt("InvertYAxis") == 0? false : true;
-        _rotationSpeed = PlayerPrefs.GetInt("MouseSensitivity");
+        InvertYAxis = PlayerPrefs.GetInt("InvertYAxis") != 0;
+        RotationSpeed = PlayerPrefs.GetInt("MouseSensitivity");
+
+        // Locking cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        // Pausing the game
+        if (Input.GetButtonDown("Menu"))
+        {
+            Pause();
+        }
+    }
+
     void FixedUpdate()
     {
-        // Cannot move if playerObkects is reading a note
+        // Cannot move if player is reading a note or has open inventory
         if (!_playerCamera.gameObject.GetComponent<InteractionController>().IsReadingNote &&
             !_playerCamera.gameObject.GetComponent<InteractionController>().IsInventoryOpen)
         {
@@ -65,8 +80,8 @@ public class PlayerControl : MonoBehaviour
     private void CameraMove()
     {
         // Mouse Input
-        float deltaXRotation = Input.GetAxis("Camera Y") * _rotationSpeed * (_invertYAxis ? -1 : 1);
-        float deltaYRotation = Input.GetAxis("Camera X") * _rotationSpeed;
+        float deltaXRotation = Input.GetAxis("Camera Y") * RotationSpeed * (InvertYAxis ? -1 : 1);
+        float deltaYRotation = Input.GetAxis("Camera X") * RotationSpeed;
 
         // Calculating target rotation
         Vector3 newCameraRotation = _cameraTarget.eulerAngles + new Vector3(deltaXRotation, deltaYRotation, 0);
@@ -118,7 +133,7 @@ public class PlayerControl : MonoBehaviour
             else
                 _sprintTimer = 0;
         }
-            
+
 
         _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * (2 * _movementSpeed * sprintMultiplier - (currentSpeed * 50)) * verticalAxis * transform.forward);
 
@@ -131,7 +146,7 @@ public class PlayerControl : MonoBehaviour
     // Lamp smooth movement
     private void LampMove()
     {
-        if(!_playerLamp.IsUnityNull())
+        if (!_playerLamp.IsUnityNull())
         {
             _playerLamp.position = _lampTarget.position;
 
@@ -143,6 +158,31 @@ public class PlayerControl : MonoBehaviour
             }
 
             _playerLamp.rotation = Quaternion.Slerp(_playerLamp.rotation, newLampRotation, 25 * Time.deltaTime);
+        }
+    }
+
+    // Pause or unpause
+    public void Pause()
+    {
+        if (!menus[0].activeInHierarchy)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            _playerCamera.gameObject.GetComponent<InteractionController>().IsPaused = true;
+            Time.timeScale = 0;
+            menus[0].SetActive(true);
+        }
+        else
+        {
+            menus[0].SetActive(false);
+            menus[1].SetActive(false);
+            Time.timeScale = 1;
+            _playerCamera.gameObject.GetComponent<InteractionController>().IsPaused = false;
+            if (!_playerCamera.gameObject.GetComponent<InteractionController>().IsInventoryOpen)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
     }
 }
