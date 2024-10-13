@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float _movementSpeed = 60;
     [SerializeField] private float _rotationSpeed = 4;
     [SerializeField] private float _cameraSmoothness = 10f;
+    [SerializeField] private bool _invertYAxis = false;
 
     [SerializeField] private Vector3 _cameraPositionOffset = new(0, 1.7f, 0);
 
@@ -24,7 +25,6 @@ public class PlayerControl : MonoBehaviour
 
     // Lerping targets
     private Quaternion _cameraTarget;
-    private Quaternion _playerTarget;
     [SerializeField] private Transform _lampTarget;
 
     private Rigidbody _rigidBody;
@@ -40,7 +40,10 @@ public class PlayerControl : MonoBehaviour
             _playerCamera = Camera.main;
 
         _cameraTarget = _playerCamera.transform.rotation;
-        _playerTarget = transform.rotation;
+
+        // Set user settings
+        _invertYAxis = PlayerPrefs.GetInt("InvertYAxis") == 0? false : true;
+        _rotationSpeed = PlayerPrefs.GetInt("MouseSensitivity");
     }
 
     // Update is called once per frame
@@ -62,16 +65,11 @@ public class PlayerControl : MonoBehaviour
     private void CameraMove()
     {
         // Mouse Input
-        float deltaXRotation = Input.GetAxis("Camera Y") * _rotationSpeed;
+        float deltaXRotation = Input.GetAxis("Camera Y") * _rotationSpeed * (_invertYAxis ? -1 : 1);
         float deltaYRotation = Input.GetAxis("Camera X") * _rotationSpeed;
 
         // Calculating target rotation
         Vector3 newCameraRotation = _cameraTarget.eulerAngles + new Vector3(deltaXRotation, deltaYRotation, 0);
-        //Vector3 newPlayerRotation = _playerTarget.eulerAngles + new Vector3(0, deltaYRotation, 0);
-
-        // Rotating playerObkects (Y axis)
-        //_playerTarget.eulerAngles = newPlayerRotation;
-        //transform.localRotation = Quaternion.Slerp(transform.localRotation, _playerTarget, 1 / _cameraSmoothness * 100 * Time.deltaTime);
 
         // Checking rotation angles constraints
         if (newCameraRotation.x > _cameraRotationVerticalConstraints[0] && newCameraRotation.x < _cameraRotationVerticalConstraints[1])
