@@ -29,6 +29,8 @@ public class PlayerControl : MonoBehaviour
 
     private Rigidbody _rigidBody;
 
+    [SerializeField] private Animator _animator;
+
     private float _sprintTimer = 0;
 
     // Menus UI
@@ -59,6 +61,22 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetButtonDown("Menu"))
         {
             Pause();
+        }
+
+        // Head animation
+        if (_animator.IsInTransition(0))
+            return;
+        float _speed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
+        if (_speed > 0.1f)
+        {
+            _animator.SetFloat("WalkingSpeed", _speed / 2.24f);
+            if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("walking"))
+                _animator.SetTrigger("TriggerWalk");
+        }
+        else
+        {
+            if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                _animator.SetTrigger("TriggerIdle");
         }
     }
 

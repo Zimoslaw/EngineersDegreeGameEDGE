@@ -7668,14 +7668,14 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.07529368, g: 0.09003795, b: 0.11320752, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 21.873112
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -7690,7 +7690,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 50
+  field of view: 57.500004
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -9854,6 +9854,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139874949731790237, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: field of view
+      value: 57.500004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139874949731790237, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 21.873112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139874949731790237, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4175543059712792112, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
