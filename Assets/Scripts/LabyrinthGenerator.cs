@@ -11,8 +11,7 @@ public class LabyrinthGenerator : MonoBehaviour
 {
     private Cell[,] cells;
 
-    [SerializeField]
-    private int labyrinthSize = 5;
+    public int labyrinthSize = 5;
 
     [SerializeField]
     private GameObject startCellPrefab;
