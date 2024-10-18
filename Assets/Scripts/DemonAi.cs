@@ -7,6 +7,9 @@ using UnityEngine.AI;
 public class DemonAi : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
+    LabyrinthGenerator labyrinth;
+
+    int labyrinthSize = 5;
 
     public float ViewRadius = 16f;
 
@@ -15,6 +18,9 @@ public class DemonAi : MonoBehaviour
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+        labyrinth = GameObject.FindWithTag("Labyrinth");
+        if (!labyrinth.IsUnityNull())
+            labyrinthSize = labyrinth.labyrinthSize;
 
         StartCoroutine("LookForDestinationWithDelay", 0.5f);
     }
@@ -55,7 +61,9 @@ public class DemonAi : MonoBehaviour
     {
         if (agent.remainingDistance < 0.1f)
         {
-            ChangeDestination(LabyrinthGenerator.GetRandomCell());
+            int x = UnityEngine.Random.Range(0, labyrinthSize);
+            int z = UnityEngine.Random.Range(0, labyrinthSize);
+            ChangeDestination(new Vector3(x * 4f, 0.1f, z * 4f));
         }
     }
 
