@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class GetToLabyrinth : MonoBehaviour
@@ -11,6 +13,8 @@ public class GetToLabyrinth : MonoBehaviour
     private GameObject labyrinth;
     [SerializeField]
     private GameObject loadingImageObject;
+    [SerializeField]
+    private DemonAi demon;
 
     private bool fadingIn = false;
     private bool fadingOut = false;
@@ -40,6 +44,12 @@ public class GetToLabyrinth : MonoBehaviour
                 {
                     Vector3 newPosition = new(transforTo.x * 4, obj.position.y, transforTo.z * 4);
                     obj.position = newPosition;
+                }
+
+                demon = GameObject.FindWithTag("Demon").GetComponent<DemonAi>();
+                if (!demon.IsUnityNull())
+                {
+                    demon.ChangeDestination(demon.CurrentDestination);
                 }
             }
 

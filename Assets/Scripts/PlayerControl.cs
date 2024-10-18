@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Playables;
 using UnityEngine.Scripting.APIUpdating;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed = 60;
-    public float RotationSpeed = 4;
+    public float RotationSpeed = 4; // AKA mouse sensitivity
     [SerializeField] private float _cameraSmoothness = 10f;
     public bool InvertYAxis = false;
 
@@ -18,7 +20,6 @@ public class PlayerControl : MonoBehaviour
 
     // Angle constraints for X axis rotation
     [SerializeField] private float[] _cameraRotationVerticalConstraints = { 70f, 270f };
-
 
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private Transform _playerLamp;
@@ -29,12 +30,15 @@ public class PlayerControl : MonoBehaviour
 
     private Rigidbody _rigidBody;
 
+    // Head animator
     [SerializeField] private Animator _animator;
 
     private float _sprintTimer = 0;
 
     // Menus UI
     [SerializeField] private GameObject[] menus;
+
+    [SerializeField] private PlayableDirector _gameOverTimeline;
 
     // Start is called before the first frame update
     void Start()
@@ -136,12 +140,12 @@ public class PlayerControl : MonoBehaviour
         // For constraining max movement speed
         float currentSpeed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
 
-        // Sprinting (only for forward movement, for max 10 seconds)
+        // Sprinting (only for forward movement, for max 5 seconds)
         float sprintMultiplier = 1;
-        if (verticalAxis > 0 && horizontalAxis == 0 && Input.GetKey(KeyCode.LeftShift))
+        if (verticalAxis > 0 && horizontalAxis == 0 && Input.GetButton("Bieg"))
         {
             _sprintTimer += Time.deltaTime;
-            if (_sprintTimer < 10)
+            if (_sprintTimer < 5)
                 sprintMultiplier = 2;
         }
         else
@@ -201,6 +205,20 @@ public class PlayerControl : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
+        }
+    }
+
+    //Game over
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Demon"))
+        {
+            _playerCamera.gameObject.GetComponent<InteractionController>().IsReadingNote = true;
+            other.GetComponent<NavMeshAgent>().isStopped = true;
+            _playerCamera.transform.LookAt(other.transform.position);
+            _gameOverTimeline.Play();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

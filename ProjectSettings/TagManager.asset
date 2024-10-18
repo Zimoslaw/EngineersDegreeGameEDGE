@@ -8,6 +8,7 @@ TagManager:
   - LoadingImage
   - LoadingText
   - PlayerLamp
+  - Demon
   layers:
   - Default
   - TransparentFX

@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.AI.Navigation;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LabyrinthGenerator : MonoBehaviour
 {
@@ -26,13 +28,23 @@ public class LabyrinthGenerator : MonoBehaviour
     public (int z, int x) startCell;
     public (int z, int x) exitCell;
 
+    [SerializeField]
+    private GameObject demon;
+
+    NavMeshSurface navMesh;
+
     void Awake()
     {
+        navMesh = GetComponent<NavMeshSurface>();
+
         GenerateMazeArray();
 
         InstantiateCells();
 
-        SaveLabyrinth();
+        if (!navMesh.IsUnityNull())
+        {
+            NavMeshBaking();
+        }
     }
 
     /// <summary>
@@ -267,8 +279,15 @@ public class LabyrinthGenerator : MonoBehaviour
         return chosen;
     }
 
-    void SaveLabyrinth()
+    /// <summary>
+    /// Bakes navigation mesh on labyrinth, instantiates the demon and sets its initial destination
+    /// </summary>
+    void NavMeshBaking()
     {
-        return;
+        navMesh.BuildNavMesh();
+
+        Instantiate(demon, new Vector3(exitCell.x * 4 + 1, 0.1f, exitCell.z * 4 + 1), Quaternion.identity);
+
+        demon.GetComponent<DemonAi>().CurrentDestination = new Vector3(startCell.x * 4, 0.1f, startCell.z * 4);
     }
 }
