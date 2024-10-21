@@ -40,16 +40,11 @@ public class GetToLabyrinth : MonoBehaviour
                 Color imageColor = new(0, 0, 0, 1);
                 loadingImageObject.GetComponent<Image>().color = imageColor;
 
+                // Move player to the maze
                 foreach (Transform obj in objectsToMoveIntoLabyrinth)
                 {
                     Vector3 newPosition = new(transforTo.x * 4, obj.position.y, transforTo.z * 4);
                     obj.position = newPosition;
-                }
-
-                demon = GameObject.FindWithTag("Demon").GetComponent<DemonAi>();
-                if (!demon.IsUnityNull())
-                {
-                    demon.ChangeDestination(demon.CurrentDestination);
                 }
             }
 
@@ -77,6 +72,9 @@ public class GetToLabyrinth : MonoBehaviour
                 loadingImageObject.GetComponent<Image>().color = imageColor;
                 fadingOut = false;
                 loadingImageObject.SetActive(false);
+
+                // Put the demon in the maze
+                labyrinth.GetComponent<LabyrinthGenerator>().InstantiateDemon();
             }
         }
     }

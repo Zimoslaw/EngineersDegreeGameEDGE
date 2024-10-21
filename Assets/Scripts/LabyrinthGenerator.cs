@@ -279,12 +279,18 @@ public class LabyrinthGenerator : MonoBehaviour
     }
 
     /// <summary>
-    /// Bakes navigation mesh on labyrinth, instantiates the demon and sets its initial destination
+    /// Bakes navigation mesh on labyrinth
     /// </summary>
     void NavMeshBaking()
     {
         navMesh.BuildNavMesh();
+    }
 
+    /// <summary>
+    /// Instantiates demon's prefab a set its destination to starting cell
+    /// </summary>
+    public void InstantiateDemon()
+    {
         Instantiate(demon, new Vector3(exitCell.x * 4 + 1, 0.1f, exitCell.z * 4 + 1), Quaternion.identity);
 
         demon.GetComponent<DemonAi>().CurrentDestination = new Vector3(startCell.x * 4, 0.1f, startCell.z * 4);

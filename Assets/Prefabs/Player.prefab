@@ -7902,7 +7902,7 @@ GameObject:
   - component: {fileID: 9039205398806703905}
   - component: {fileID: 3300494313135419584}
   - component: {fileID: 5640510627876190926}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerObject
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8236,7 +8236,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 125
+    m_Bits: 253
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -10630,6 +10630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FocalLength
       value: 21.873112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139874949731790237, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 253
       objectReference: {fileID: 0}
     - target: {fileID: 4139874949731790237, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}

@@ -6,7 +6,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static Interactable;
-using static UnityEditor.Progress;
 
 [Serializable]
 public class PlayerInventory : MonoBehaviour

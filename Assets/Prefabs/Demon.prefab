@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8844953448177427502}
   - component: {fileID: 5823617950324909332}
   - component: {fileID: 4809710504082919509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Demon
   m_TagString: Demon
   m_Icon: {fileID: 0}
@@ -54,8 +54,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 3, z: 2}
-  m_Center: {x: 0, y: 1.5, z: 1.5}
+  m_Size: {x: 1, y: 3, z: 1}
+  m_Center: {x: 0, y: 1.5, z: 1}
 --- !u!114 &5823617950324909332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +69,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4809710504082919509}
-  CurrentDestination: {x: 4, y: 0.1, z: 8}
+  ViewRadius: 16
+  ViewAngle: 345
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1
+  CurrentDestination: {x: 8, y: 0.1, z: 20}
 --- !u!195 &4809710504082919509
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -104,7 +112,7 @@ GameObject:
   - component: {fileID: 2716778529347066446}
   - component: {fileID: 2104988595459111105}
   - component: {fileID: 3090282955393383745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DemonMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

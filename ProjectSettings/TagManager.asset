@@ -9,6 +9,7 @@ TagManager:
   - LoadingText
   - PlayerLamp
   - Demon
+  - Labyrinth
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Post Processing
-  - 
+  - Agents
   - 
   - 
   - 

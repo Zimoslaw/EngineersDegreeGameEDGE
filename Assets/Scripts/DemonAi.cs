@@ -12,17 +12,21 @@ public class DemonAi : MonoBehaviour
     int labyrinthSize = 5;
 
     public float ViewRadius = 16f;
+    public float ViewAngle = 180f;
 
-    public Vector3 CurrentDestination = new(0, 0.1f, 0);
+    public LayerMask playerMask;
+    public LayerMask obstacleMask;
+
+    public Vector3 CurrentDestination;
 
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
-        labyrinth = GameObject.FindWithTag("Labyrinth");
+        labyrinth = GameObject.FindWithTag("Labyrinth").GetComponent<LabyrinthGenerator>();
         if (!labyrinth.IsUnityNull())
             labyrinthSize = labyrinth.labyrinthSize;
 
-        StartCoroutine("LookForDestinationWithDelay", 0.5f);
+        StartCoroutine("LookForDestinationWithDelay", 0.2f);
     }
 
     IEnumerator LookForDestinationWithDelay(float delay)
@@ -32,8 +36,9 @@ public class DemonAi : MonoBehaviour
             yield return new WaitForSeconds(delay);
             LookForPlayer();
             IsAtDestination();
+            ChangeDestination();
         }
-    ]
+    }
 
     void LookForPlayer()
     {
@@ -43,13 +48,15 @@ public class DemonAi : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
-                Vector3 directionToPlayer = (collider.transform.postion - transform.position).normalized;
-                if (Vector3.Angle(transform.forward, directionToPlayer) < ViewRadius / 2)
+                Debug.Log("Gracz w zasięgu");
+                Vector3 directionToPlayer = (collider.transform.position - transform.position).normalized;
+                if (Vector3.Angle(transform.forward, directionToPlayer) < ViewAngle / 2)
                 {
+                    Debug.Log("Gracz w polu widzenia");
                     float distanceToPlayer = Vector3.Distance(transform.position, collider.transform.position);
                     if (!Physics.Raycast(transform.position, directionToPlayer, distanceToPlayer, obstacleMask))
                     {
-                        ChangeDestination(collider.transform.position);
+                        CurrentDestination = collider.transform.position;
                         Debug.Log("Gracz zauważony");
                     }
                 }
@@ -59,20 +66,24 @@ public class DemonAi : MonoBehaviour
 
     void IsAtDestination()
     {
-        if (agent.remainingDistance < 0.1f)
+        if (Vector3.Distance(transform.position, CurrentDestination) < 0.1f)
         {
+            Debug.Log("Demon u celu");
             int x = UnityEngine.Random.Range(0, labyrinthSize);
             int z = UnityEngine.Random.Range(0, labyrinthSize);
-            ChangeDestination(new Vector3(x * 4f, 0.1f, z * 4f));
+            CurrentDestination = new Vector3(x * 4, 0.1f, z * 4);
         }
     }
 
-    public void ChangeDestination(Vector3 destination)
+    public void ChangeDestination()
     {
         if (!agent.IsUnityNull() && agent.isOnNavMesh)
         {
-            agent.SetDestination(destination);
-            Debug.Log("Nowy cel demona:" + agent.destination);
+            if(Vector3.Distance(agent.destination, CurrentDestination) > 0.1f)
+            {
+                agent.SetDestination(CurrentDestination);
+                Debug.Log("Nowy cel demona:" + agent.destination);
+            }
         }
     }
 }
