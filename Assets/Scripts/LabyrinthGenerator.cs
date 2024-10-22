@@ -127,6 +127,9 @@ public class LabyrinthGenerator : MonoBehaviour
                 _coordStack.Add(neighbourCoord);
             }
         }
+
+        // Deleting starting cell walls for harder start
+        cells[startCell.z, startCell.x].walls.RemoveAll();
     }
 
     /// <summary>
