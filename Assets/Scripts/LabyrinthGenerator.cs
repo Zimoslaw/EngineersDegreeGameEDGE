@@ -129,7 +129,10 @@ public class LabyrinthGenerator : MonoBehaviour
         }
 
         // Deleting starting cell walls for harder start
-        cells[startCell.z, startCell.x].walls.RemoveAll();
+        cells[startCell.z + 1, startCell.x].walls.Remove(0);
+        cells[startCell.z, startCell.x + 1].walls.Remove(1);
+        cells[startCell.z - 1, startCell.x].walls.Remove(2);
+        cells[startCell.z, startCell.x - 1].walls.Remove(3);
     }
 
     /// <summary>

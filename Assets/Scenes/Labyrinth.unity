@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.1
+  m_VoxelSize: 0.11666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
@@ -3395,7 +3395,7 @@ PrefabInstance:
     - target: {fileID: 409730468396190728, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.15789473
       objectReference: {fileID: 0}
     - target: {fileID: 409730468396190728, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
@@ -3482,12 +3482,12 @@ PrefabInstance:
     - target: {fileID: 5424412184463828994, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6009710031898477699, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.15789473
       objectReference: {fileID: 0}
     - target: {fileID: 6009710031898477699, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
@@ -3497,7 +3497,7 @@ PrefabInstance:
     - target: {fileID: 6009710031898477699, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.15789473
       objectReference: {fileID: 0}
     - target: {fileID: 6210972713522808971, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
@@ -3517,17 +3517,17 @@ PrefabInstance:
     - target: {fileID: 6669651956822868734, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.699
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 6669651956822868734, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6669651956822868734, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -61.138
+      value: -28.97
       objectReference: {fileID: 0}
     - target: {fileID: 6669651956822868734, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
@@ -3583,6 +3583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 16777215
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052160545861774078, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8675927268857650356, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}

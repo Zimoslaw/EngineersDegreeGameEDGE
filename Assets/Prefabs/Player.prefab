@@ -10995,13 +10995,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1183850996236525842, guid: 885fda039e6729c4c9ac4031f130a230,
         type: 3}
+      propertyPath: m_Value
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183850996236525842, guid: 885fda039e6729c4c9ac4031f130a230,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183850996236525842, guid: 885fda039e6729c4c9ac4031f130a230,
+        type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5640510627876190926}
     - target: {fileID: 1183850996236525842, guid: 885fda039e6729c4c9ac4031f130a230,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MouseSensitivitySlider
+      value: MouseSensitivitySlide
       objectReference: {fileID: 0}
     - target: {fileID: 1183850996236525842, guid: 885fda039e6729c4c9ac4031f130a230,
         type: 3}
@@ -11022,6 +11032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040220655794295453, guid: 885fda039e6729c4c9ac4031f130a230,
+        type: 3}
+      propertyPath: m_text
+      value: "Czu\u0142o\u015B\u0107 kamery"
       objectReference: {fileID: 0}
     - target: {fileID: 4328641199290487840, guid: 885fda039e6729c4c9ac4031f130a230,
         type: 3}

@@ -142,7 +142,7 @@ public class PlayerControl : MonoBehaviour
 
         // Sprinting (only for forward movement, for max 5 seconds)
         float sprintMultiplier = 1;
-        if (verticalAxis > 0 && horizontalAxis == 0 && Input.GetButton("Bieg"))
+        if (verticalAxis > 0 && horizontalAxis == 0 && Input.GetButton("Run"))
         {
             _sprintTimer += Time.deltaTime;
             if (_sprintTimer < 5)
