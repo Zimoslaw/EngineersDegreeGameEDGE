@@ -109,10 +109,13 @@ public class KeroseneLamp : MonoBehaviour
         // Fire flickering
         _flickeringTimer += Time.deltaTime;
 
-        if(_flickeringTimer >= _flickeringRate)
+        if (KeroseseneLevel > 0)
         {
-            _flickeringTimer = 0;
-            _lights[0].intensity += Random.Range(-0.1f, 0.1f);
+            if (_flickeringTimer >= _flickeringRate)
+            {
+                _flickeringTimer = 0;
+                _lights[0].intensity += Random.Range(-0.1f, 0.1f);
+            }
         }
     }
 
