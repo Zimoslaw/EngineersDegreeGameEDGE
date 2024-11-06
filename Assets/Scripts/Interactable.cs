@@ -25,6 +25,7 @@ public class Interactable : MonoBehaviour
     public string OpeningAnimation = "open";
     public string ClosingAnimation = "close";
     public Collider Collider;
+    public GameObject Light;
     public int amount = 1; // for inventory
 
     public void Interact(GameObject Player)
@@ -73,10 +74,12 @@ public class Interactable : MonoBehaviour
                 if (State == 0)
                 {
                     State = 1;
+                    Light.SetActive(true);
                 }
                 else
                 {
                     State = 0;
+                    Light.SetActive(false);
                 }
                 break;
             case InteractableTypeEnum.Kerosene:

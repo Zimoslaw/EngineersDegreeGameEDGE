@@ -127,9 +127,9 @@ public class PlayerInventory : MonoBehaviour
             newItem.GetComponent<Button>().onClick.AddListener(() => UseItem(inventoryItem));
 
             if (item.amount > 1)
-                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name + " (×" + item.amount + ")";
+                newItem.GetComponentInChildren<TextMeshProUGUI>().text = "• " + item.Name + " (×" + item.amount + ")";
             else
-                newItem.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
+                newItem.GetComponentInChildren<TextMeshProUGUI>().text = "• " + item.Name;
         }
 
         _inventoryBackground.SetActive(true);
