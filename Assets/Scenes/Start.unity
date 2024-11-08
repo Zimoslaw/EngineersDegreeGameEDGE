@@ -9886,12 +9886,12 @@ MonoBehaviour:
   m_FadeScale: 0.9
   m_StartAngleFade: 180
   m_EndAngleFade: 180
-  m_UVScale: {x: 6.787003, y: 5.3737507}
+  m_UVScale: {x: 6.2450705, y: 5.3737507}
   m_UVBias: {x: -3.6739712, y: -2.4977531}
   m_DecalLayerMask: 4294967295
   m_ScaleMode: 0
-  m_Offset: {x: -0.78046966, y: -0.3108778, z: 0.3953906}
-  m_Size: {x: 6.787003, y: 5.3737507, z: 0.109399974}
+  m_Offset: {x: -1.051436, y: -0.3108778, z: 0.3953906}
+  m_Size: {x: 6.2450705, y: 5.3737507, z: 0.109399974}
   m_FadeFactor: 1
 --- !u!1 &387593417
 GameObject:
@@ -12199,6 +12199,62 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531548249}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &534580583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534580584}
+  - component: {fileID: 534580585}
+  m_Layer: 0
+  m_Name: carpet (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 65
+  m_IsActive: 1
+--- !u!4 &534580584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534580583}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.70710677, y: -0.00000014901158, z: 0.00000005960463, w: 0.70710677}
+  m_LocalPosition: {x: 2.043, y: -1.6589999, z: 0.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1998003496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534580585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534580583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 9137ade091f360c4f8932c43d1657297, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 3.76, y: 4.25}
+  m_UVBias: {x: -4.6260777, y: -2.6259005}
+  m_DecalLayerMask: 4294967295
+  m_ScaleMode: 0
+  m_Offset: {x: -2.529429, y: -0.23709536, z: 0.3953906}
+  m_Size: {x: 6.2985153, y: 5.8670387, z: 0.109399974}
+  m_FadeFactor: 1
 --- !u!1 &543884429
 GameObject:
   m_ObjectHideFlags: 0
@@ -42482,7 +42538,7 @@ PrefabInstance:
     - target: {fileID: 5468248438414724310, guid: c8e88878422598c4fb3ad8991f7c23ca,
         type: 3}
       propertyPath: m_Intensity
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51457,6 +51513,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1509553477}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3b288defbabbd24db8534df473d50d9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 534580584}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3b288defbabbd24db8534df473d50d9,
         type: 3}
