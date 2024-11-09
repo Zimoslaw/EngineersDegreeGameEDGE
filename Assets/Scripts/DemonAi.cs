@@ -54,8 +54,24 @@ public class DemonAi : MonoBehaviour
 
     void LookForPlayer()
     {
-        // Looking for player in view range
-        Collider[]  collidersInView = Physics.OverlapSphere(transform.position, ViewRadius, playerMask);
+		GameObject lamp = GameObject.FindGameObjectWithTag("PlayerLamp");
+		if (!lamp.IsUnityNull())
+		{
+			if (lamp.GetComponent<KeroseneLamp>().KeroseseneLevel <= 0)
+            {
+				GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if(!player.IsUnityNull())
+                {
+                    CurrentDestination = player.transform.position;
+                    isChasingPlayer = true;
+                    Debug.Log("Podążam za graczem bez nafty");
+                    return;
+                }
+			}
+		}
+
+		// Looking for player in view range
+		Collider[]  collidersInView = Physics.OverlapSphere(transform.position, ViewRadius, playerMask);
 
         foreach (Collider collider in collidersInView)
         {

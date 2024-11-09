@@ -17,17 +17,22 @@ public class LabyrinthGenerator : MonoBehaviour
     private GameObject startCellPrefab;
     [SerializeField]
     private GameObject exitCellPrefab;
+	[SerializeField]
+	private GameObject extraExitCellPrefab;
 
-    [SerializeField]
+	[SerializeField]
     private GameObject exitTrigger;
+	[SerializeField]
+	private GameObject extraExitTrigger;
 
-    [SerializeField]
+	[SerializeField]
     private GameObject[] cellsPrefabs;
 
     public (int z, int x) startCell;
     public (int z, int x) exitCell;
+	public (int z, int x) extraExitCell;
 
-    [SerializeField]
+	[SerializeField]
     private GameObject demon;
 
     NavMeshSurface navMesh;
@@ -85,7 +90,19 @@ public class LabyrinthGenerator : MonoBehaviour
         // Move exit trigger to exit cell
         exitTrigger.transform.position = new Vector3(exitCell.x * 4, 0, exitCell.z * 4);
 
-        while (_coordStack.Count != 0)
+        // Calculate coords od extra exit cell
+        do
+        {
+            extraExitCell.z = UnityEngine.Random.Range(1, labyrinthSize - 1);
+        } while(extraExitCell.z == startCell.z || extraExitCell.z == exitCell.z);
+		do
+		{
+			extraExitCell.x = UnityEngine.Random.Range(1, labyrinthSize - 1);
+		} while(extraExitCell.x == startCell.x || extraExitCell.x == exitCell.x);
+		// Move exit trigger to exit cell
+		extraExitTrigger.transform.position = new Vector3(extraExitCell.x * 4, 0, extraExitCell.z * 4);
+
+		while (_coordStack.Count != 0)
         {
             // Pop last cell from stack
             var current = _coordStack.Last();
@@ -162,8 +179,15 @@ public class LabyrinthGenerator : MonoBehaviour
                     continue;
                 }
 
-                // Junction 4-way
-                if (cell.walls.Count == 0) 
+				//Extra exiting cell
+				if(extraExitCell.z == z && extraExitCell.x == x)
+				{
+					Instantiate(extraExitCellPrefab, new Vector3(x * 4, 0, z * 4), Quaternion.identity, gameObject.transform);
+					continue;
+				}
+
+				// Junction 4-way
+				if (cell.walls.Count == 0) 
                 {
                     Instantiate(cellsPrefabs[indexMultiplier * 5 + 4], new Vector3(x * 4, 0, z * 4), Quaternion.identity, gameObject.transform);
                     continue;

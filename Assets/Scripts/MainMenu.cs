@@ -43,7 +43,11 @@ public class MainMenu : MonoBehaviour
         {
             mouseSensitivitySlider.value = PlayerPrefs.GetInt("MouseSensitivity");
         }
-    }
+
+		// Reseting cursor
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+	}
 
     public void PlayGame()
     {
