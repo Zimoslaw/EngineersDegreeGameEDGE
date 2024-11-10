@@ -44,7 +44,7 @@ public class Subtitles : MonoBehaviour
 	/// </summary>
 	/// <param name="message">Message to show</param>
 	/// <param name="type">Type of message. Specifies the text color</param>
-	public void ShowMessage(string message, float displayTime = 4f, byte type = 0)
+	public void ShowMessage(string message, byte type = 0, float displayTime = 4f)
 	{
 		// Reset timer
 		_showTimer = 0;

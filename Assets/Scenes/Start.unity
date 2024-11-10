@@ -338,6 +338,136 @@ Transform:
   m_Children: []
   m_Father: {fileID: 83918021}
   m_LocalEulerAnglesHint: {x: 56.56, y: -90, z: -90}
+--- !u!1001 &24957374
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 978604905}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.533
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8786
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.162
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000009238719
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_Name
+      value: night-table (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 65
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 24957376}
+  m_SourcePrefab: {fileID: 100100000, guid: 8c9a28abfa1137b47aafef1a6f47c0c9, type: 3}
+--- !u!1 &24957375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 24957374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &24957376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24957375}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1719902, y: 1.3181058, z: 1.1551012}
+  m_Center: {x: -0.020995734, y: 0.6653694, z: -0.029397346}
+--- !u!4 &24957377 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c9a28abfa1137b47aafef1a6f47c0c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 24957374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &25239192
 GameObject:
   m_ObjectHideFlags: 0
@@ -18798,10 +18928,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToActivate:
   - {fileID: 821706311}
+  objectsToDeactivate: []
   animatorsToPlay: []
   soundsToPlay: []
   subtitlesToShow: "To musi byc miejsce, kt\xF3rego wychodz\u0105 te szczury! Musz\u0119
     znale\u017A\u0107 spos\xF3b na odsuni\u0119cie go."
+  subtitlesTime: 4
 --- !u!65 &670034176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20688,8 +20820,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.55, y: 0.86, z: 0.8526168}
-  m_Center: {x: 0.000000003257636, y: -0.12053155, z: 0.42799175}
+  m_Size: {x: 1.55, y: 0.86, z: 0.31}
+  m_Center: {x: 0.000000003257636, y: -0.12053155, z: 0.17}
 --- !u!1 &871837533
 GameObject:
   m_ObjectHideFlags: 0
@@ -21544,6 +21676,117 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906175763}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &908572154
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: Name
+      value: Wspomnienie na pergaminie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: NoteText
+      value: "    O spaniu nie by\u0142o ju\u017C co marzy\u0107. Ruszy\u0142em w
+        stron\u0119 schod\xF3w prowadz\u0105cych do mojego gabinetu. Nim jednak dotarli\u015Bmy
+        do kamiennych stopni, kot wyrwa\u0142 si\u0119 i znikn\u0105\u0142. Gdy i
+        ja ruszy\u0142em w d\xF3\u0142, raptem z komnaty dobieg\u0142 mnie d\u017Awi\u0119k,
+        kt\xF3rego niepodobna z czymkolwiek pomyli\u0107. Za d\u0119bow\u0105 boazeri\u0105
+        wprost roi\u0142o si\u0119 od szczur\xF3w: gryzonie kot\u0142owa\u0142y si\u0119
+        ze wstr\u0119tnym tupotem, a kot biega\u0142 wzd\u0142u\u017C \u015Bciany
+        miotany w\u015Bciek\u0142o\u015Bci\u0105. Znalaz\u0142szy si\u0119 w gabinecie,
+        zapali\u0142em \u015Bwiat\u0142o, tym razem to jednak nie wystarczy\u0142o,
+        by uciszy\u0107 ha\u0142as. Stada gryzoni, wyrojone w nieprzeliczonych obfito\u015Bci,
+        najwyra\u017Aniej przemieszcza\u0142y si\u0119 z jakich\u015B niewyobra\u017Calnych
+        wy\u017Cyn w d\xF3\u0142, w g\u0142\u0105b zamkowych piwnic. Po chwili masywne
+        drzwi otwar\u0142y si\u0119 i w progu stan\u0119\u0142o dw\xF3ch s\u0142u\u017C\u0105cych.
+        Biegali w\u0142a\u015Bnie po ca\u0142ym domostwie, usi\u0142uj\u0105c dociec,
+        co sprawi\u0142o, \u017Ce wszystkie koty si\u0119 nagle zje\u017Cy\u0142y
+        i pu\u015Bci\u0142y biegiem do najg\u0142\u0119bszej piwnicy. Spyta\u0142em,
+        czy s\u0142yszeli szczury, lecz s\u0142udzy zaprzeczyli chcia\u0142em zwr\xF3ci\u0107
+        ich uwag\u0119 na d\u017Awi\u0119ki zza obi\u0107, lecz zda\u0142em sobie
+        spraw\u0119, \u017Ce wszelki ha\u0142as ucich\u0142..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Name
+      value: note
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.3775
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.6486
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.8578
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.706579
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.027318377
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0011283382
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2.124
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9, type: 3}
 --- !u!1001 &940350938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38768,6 +39011,7 @@ Transform:
   - {fileID: 833096434}
   - {fileID: 1022830453}
   - {fileID: 861975100}
+  - {fileID: 1786086033}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272375476
@@ -39388,6 +39632,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 994634140}
   m_SourcePrefab: {fileID: 100100000, guid: 6e1f872f86539f34e96628250cebdf7b, type: 3}
+--- !u!4 &1309176908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1489193630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1312263868
 GameObject:
   m_ObjectHideFlags: 0
@@ -42622,6 +42872,122 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &1481587917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1998003496}
+    m_Modifications:
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: Name
+      value: Kartka wrzucona do kominka
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: NoteText
+      value: "    Poniewa\u017C czu\u0142em si\u0119 bardzo niewyspany, wcze\u015Bnie
+        uda\u0142em si\u0119 na spoczynek. \u015Ani\u0142em, \u017Ce spogl\u0105dam
+        z niebotycznych wysoko\u015Bci w g\u0142\u0105b spowitej p\xF3\u0142mrokiem
+        groty pe\u0142nej gnoju i widz\u0119 jak unurzany w nim po kolana bia\u0142obrody
+        demon pasie stado sflacza\u0142ych grzybowatych bydl\u0105t, kt\xF3rych wygl\u0105d
+        nape\u0142ni\u0142 mnie niewys\u0142owion\u0105 odraz\u0105. W pewnym momencie
+        pasterz zatrzyma\u0142 si\u0119 i skin\u0105\u0142 g\u0142ow\u0105- na ten
+        znak nieprzeliczony r\xF3j szczur\xF3w rzuci\u0142 si\u0119 z g\xF3ry w cuchn\u0105c\u0105
+        czelu\u015B\u0107 i j\u0105\u0142 po\u017Cera\u0107 jednako stado i pasterza.
+        Z tej strasznej wizji wybudzi\u0142 mnie znienacka Nigger-Man. Tym razem
+        nie musia\u0142em si\u0119 domy\u015Bla\u0107, czemu tak burczy i syczy,
+        ani docieka\u0107, dlaczego a\u017C tak si\u0119 przel\u0105k\u0142, \u017Ce
+        zatopi\u0142 pazury w mojej \u0142ydce- oto bowiem wszystkie \u015Bciany
+        komnaty rozt\u0119tni\u0142y si\u0119 mdl\u0105cym d\u017Awi\u0119kiem: plugawym,
+        \u015Bliskim chrobotem wyg\u0142odnia\u0142ych, gigantycznych szczur\xF3w.
+        Gdy \u017Car\xF3wki rozjarzy\u0142y si\u0119 ju\u017C jasnym blaskiem, ujrza\u0142em,
+        \u017Ce zas\u0142aniaj\u0105ce \u015Bcian\u0119 opony rozfalowa\u0142y si\u0119
+        ohydnym dr\u017Ceniem, przez co zdobi\u0105ce je figury, utrzymane w cokolwiek
+        osobliwym stylu, ruszy\u0142y w przedziwny pl\u0105s \u015Bmierci. D\u017Agn\u0105\u0142em
+        arras r\u0119koje\u015Bci\u0105 szkandeli, po czym unios\u0142em r\xF3g tkaniny-
+        nie by\u0142o tam wszak\u017Ce nic pr\xF3cz po\u0142atanego kamiennego muru.
+        Sprawdzi\u0142em pu\u0142apk\u0119- by\u0142a zatrza\u015Bni\u0119ta, lecz
+        cokolwiek si\u0119 w ni\u0105 z\u0142apa\u0142o, znikn\u0119\u0142o bez \u015Bladu..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Name
+      value: note
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07981033
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.948
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.563758
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.31890056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.94778824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -142.807
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9, type: 3}
+--- !u!4 &1481587918 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1481587917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1484098719
 GameObject:
   m_ObjectHideFlags: 0
@@ -42741,6 +43107,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 83918021}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1001 &1489193630
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 978604905}
+    m_Modifications:
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: Name
+      value: Notatka na stoliku
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: NoteText
+      value: "    Jeden ze s\u0142u\u017C\u0105cych poskar\u017Cy\u0142 si\u0119,
+        \u017Ce wszystkie koty zachowuj\u0105 si\u0119 bardzo niespokojnie. Gdy przyszed\u0142
+        mi to oznajmi\u0107, siedzia\u0142em w swym gabinecie. Zanim jeszcze sko\u0144czy\u0142
+        m\xF3wi\u0107, ujrze\u0142em, jak zje\u017Cony Nigger-Man pe\u0142znie wzd\u0142u\u017C
+        zachodniej \u015Bciany i drapie w nowiutkie boazerie pokrywaj\u0105ce staro\u017Cytny
+        mur. Odpar\u0142em s\u0142u\u017C\u0105cemu, \u017Ce stare \u015Bciany pewnikiem
+        wydzielaj\u0105 osobliwy zapach czy wyziew, niewyczuwalny dla ludzkich zmys\u0142\xF3w,
+        ale dra\u017Cni\u0105cy delikatne kocie nozdrza. M\xF3wi\u0142em to ze szczerym
+        przekonaniem, gdy za\u015B s\u0142u\u017C\u0105cy zasugerowa\u0142, \u017Ce
+        mo\u017Ce w gr\u0119 wchodz\u0105 raczej szczury b\u0105d\u017A myszy, stwierdzi\u0142em,
+        \u017Ce szczur\xF3w nie by\u0142o w zamknu od dobrych trzystu lat."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Name
+      value: note
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.54206926
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.346
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.1722736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.59370863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.80468005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -162.841
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9, type: 3}
 --- !u!1001 &1490125849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42914,9 +43368,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToActivate: []
+  objectsToDeactivate: []
   animatorsToPlay: []
   soundsToPlay: []
   subtitlesToShow: "...Te schody wygl\u0105daj\u0105 jak wyryte... od \u015Brodka..?"
+  subtitlesTime: 4
 --- !u!65 &1491153112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47170,7 +47626,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.76, y: 1.78, z: 1.6529905}
+  m_Size: {x: 2.76, y: 1.04, z: 1.6529905}
   m_Center: {x: 0.000000029802322, y: -0.23774832, z: 0.72649515}
 --- !u!1001 &1751413709
 PrefabInstance:
@@ -47896,6 +48352,105 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1786086032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1264316441}
+    m_Modifications:
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: Name
+      value: Notatka na szezlongu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: NoteText
+      value: "    W kt\xF3rym\u015B momencie musia\u0142em niepostrze\u017Cenie zapa\u015B\u0107
+        w sen, pami\u0119tam bowim wyra\u017Anie, \u017Ce gdy wybudza\u0142em si\u0119
+        z jakich\u015B dziwnych roje\u0144, kot zerwa\u0142 si\u0119 nagle z miejsca.
+        Wpatrywa\u0142 si\u0119 intensywnie w jaki\u015B punkt na \u015Bcianie, nieco
+        na zach\xF3d od okna - punkt \xF3w na moje oko nie wyr\xF3\u017Cnia\u0142
+        si\u0119 niczym, lecz id\u0105c za przyk\u0142adem kota, skupi\u0142em na
+        nim teraz ca\u0142\u0105 uwag\u0119. Po chwili wiedzia\u0142em ju\u017C,
+        \u017Ce Nigger-Man nie niepokoi\u0142 si\u0119 na pr\xF3\u017Cno, Czy arras
+        faktycznie si\u0119 poruszy\u0142 - nie potrafi\u0119 orzec; my\u015Bl\u0119,
+        \u017Ce tak, leciute\u0144ko. Mog\u0119 za to przysi\u0105c, \u017Ce dobieg\u0142
+        mnie zza niego cichy, st\u0142umiony chrobot szczur\xF3w b\u0105d\u017A myszy.
+        W mgnieniu oka kot rzuci\u0142 si\u0119 wprost z \u0142\xF3\u017Cka na ci\u0119\u017Ck\u0105
+        opon\u0119 i zdar\u0142 j\u0105 na posadzk\u0119 ci\u0119\u017Carem swojego
+        cia\u0142a, ods\u0142aniaj\u0105c staro\u017Cytny mur z wilgotnego kamienia-
+        by\u0142o wida\u0107 na nim \u0142aty \u015Bwie\u017Cej zaprawy, lecz ani
+        \u015Bladu przyczajonych gryzoni."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Name
+      value: note
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7070566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.008439351
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70705634
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.008439351
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.368
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9, type: 3}
+--- !u!4 &1786086033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786086032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788269171
 GameObject:
   m_ObjectHideFlags: 0
@@ -48303,7 +48858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 22 lipca 1923 r.
+  m_text: 7 sierpnia 1923 r.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ff307d0749dc3c4280e3d78c87a1cf7, type: 2}
   m_sharedMaterial: {fileID: -4788629219780097059, guid: 1ff307d0749dc3c4280e3d78c87a1cf7,
@@ -50194,11 +50749,13 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 124016026}
   - {fileID: 1491153109}
+  objectsToDeactivate: []
   animatorsToPlay:
   - {fileID: 1370336981}
   soundsToPlay: []
   subtitlesToShow: "Uff... Uda\u0142o si\u0119 jako\u015B przesun\u0105\u0107 ten
     marmur. Ale zaraz..."
+  subtitlesTime: 4
 --- !u!65 &1940456697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51511,6 +52068,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2092665734}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3b288defbabbd24db8534df473d50d9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2123837021}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3b288defbabbd24db8534df473d50d9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1481587918}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3b288defbabbd24db8534df473d50d9,
         type: 3}
@@ -57759,6 +58324,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3959c6a42b97faa4388e3e6ca46bb19e,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 24957377}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3959c6a42b97faa4388e3e6ca46bb19e,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2022917008}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3959c6a42b97faa4388e3e6ca46bb19e,
         type: 3}
@@ -57800,6 +58369,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1738400402}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3959c6a42b97faa4388e3e6ca46bb19e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1309176908}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3959c6a42b97faa4388e3e6ca46bb19e,
         type: 3}
@@ -58739,6 +59312,106 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2111049621}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2123837020
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1998003496}
+    m_Modifications:
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: Name
+      value: Notatka na biurku
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: NoteText
+      value: "    Zatelefonowa\u0142em do Norrysa. Zjawi\u0142 si\u0119 natychmiast
+        i pom\xF3g\u0142 mi zbada\u0107 piwnic\u0119. Nie odkryli\u015Bmy absolutnie
+        nic podejrzanego, nie mogli\u015Bmy jednak powstrzyma\u0107 si\u0119 od dreszczu
+        podniecenia- zwiedzali\u015Bmy wszak lochy zbudowane r\u0119koma staro\u017Cytnych
+        Rzymian. Przypomina\u0142y o tym \u015Bciany pokryte inskrypcjami, kt\xF3re
+        zdo\u0142ali ju\u017C rozszyfrowa\u0107 historycy, na przyk\u0142ad jak:
+        L. PRAEC...VS...PONTIFI...ATYS... Odwo\u0142anie do Atysa przyprawi\u0142o
+        mnie o dreszcz, czyta\u0142em bowiem Katullusa i wiedzia\u0142em o ohydnych
+        rytach, jakie odprawiano na cze\u015B\u0107 tego boga, silnie powi\u0105zanych
+        z kultem Kybele. W \u015Bwietle latar\u0144 pr\xF3bowali\u015Bmy odczyta\u0107
+        dziwaczne, niemal do cna zatarte zdobienia na nieregularnych prostok\u0105tnych
+        blokach z kamienia, powszechnie uwa\u017Canych za sto\u0142y ofiarne. Na
+        jednym z blok\xF3w wida\u0107 by\u0142o dziwaczne br\u0105zowe plamy. Blok
+        najwi\u0119kszy, stoj\u0105cy po\u015Brodku izby, na g\xF3rnej powierzchni
+        nosi\u0142 znamiona \u015Bwiadcz\u0105ce o tym, \u017Ce ongi\u015B spotyka\u0142
+        si\u0119 z ogniem- by\u0107 mo\u017Ce sk\u0142adano na nim ca\u0142opalne
+        ofiary."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Name
+      value: note
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3060017
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5670029
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7969407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6040576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 15.678
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9, type: 3}
+--- !u!4 &2123837021 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2123837020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1264920965480441944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58838,7 +59511,19 @@ PrefabInstance:
     - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
       propertyPath: Name
-      value: Notatka na stoliku
+      value: "Kartka z pami\u0119tnika"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: NoteText
+      value: "22 lipca m\xF3j stary czarny kot, kt\xF3rego nastroje znam doskonale,
+        dziwnie si\u0119 zachowywa\u0142. Nagle zje\u017Cy\u0142 si\u0119 w czujnym
+        pogotowiu, i to tak bardzo, \u017Ce zgo\u0142a nie licowa\u0142o to z jego
+        usposobieniem. Targany niepokojem j\u0105\u0142 przemierza\u0107 komnat\u0119
+        za komnat\u0105, nieustannie obw\u0105chuj\u0105c \u015Bciany po cz\u0119\u015Bci
+        sk\u0142adaj\u0105ce si\u0119 z pierwotnych, gotyckich mur\xF3w. Dzi\u015B
+        rano jeden ze s\u0142u\u017C\u0105cych poskar\u017Cy\u0142 si\u0119, \u017Ce
+        wszystkie koty zachowuj\u0105 si\u0119 bardzo niespokojnie"
       objectReference: {fileID: 0}
     - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
@@ -59462,3 +60147,4 @@ SceneRoots:
   - {fileID: 876531128}
   - {fileID: 297496910}
   - {fileID: 2100498633}
+  - {fileID: 908572154}

@@ -88,7 +88,7 @@ public class MultiTrigger : MonoBehaviour
             GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
             if (!camera.IsUnityNull())
             {
-                camera.GetComponent<Subtitles>().ShowMessage(subtitlesToShow, subtitlesTime);
+                camera.GetComponent<Subtitles>().ShowMessage(subtitlesToShow, 0, subtitlesTime);
             }
         }
     }
