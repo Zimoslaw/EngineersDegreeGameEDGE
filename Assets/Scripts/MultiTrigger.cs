@@ -8,7 +8,10 @@ public class MultiTrigger : MonoBehaviour
     [SerializeField]
     private GameObject[] objectsToActivate;
 
-    [SerializeField]
+	[SerializeField]
+	private GameObject[] objectsToDeactivate;
+
+	[SerializeField]
     private Animator[] animatorsToPlay;
 
     [SerializeField]
@@ -16,6 +19,9 @@ public class MultiTrigger : MonoBehaviour
 
     [SerializeField]
     private string subtitlesToShow;
+
+    [SerializeField]
+    private float subtitlesTime = 4;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -38,7 +44,15 @@ public class MultiTrigger : MonoBehaviour
                 obj.SetActive(true);
             }
         }
-    }
+
+		if(objectsToDeactivate.Length > 0)
+		{
+			foreach(GameObject obj in objectsToDeactivate)
+			{
+				obj.SetActive(false);
+			}
+		}
+	}
     void Animations()
     {
         if (animatorsToPlay.Length > 0) { 
@@ -74,7 +88,7 @@ public class MultiTrigger : MonoBehaviour
             GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
             if (!camera.IsUnityNull())
             {
-                camera.GetComponent<Subtitles>().ShowMessage(subtitlesToShow);
+                camera.GetComponent<Subtitles>().ShowMessage(subtitlesToShow, subtitlesTime);
             }
         }
     }
