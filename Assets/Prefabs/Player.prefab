@@ -9694,7 +9694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1051893529763427048
@@ -9729,7 +9729,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Lorem
 
-    Ipsum'
+    Ispum'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ef09c804c5993f4dafecf8ffc98fea1, type: 2}
   m_sharedMaterial: {fileID: 2651887497652726251, guid: 1ef09c804c5993f4dafecf8ffc98fea1,
@@ -9764,7 +9764,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 3
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: -4
@@ -10591,7 +10591,7 @@ PrefabInstance:
     - target: {fileID: 155538004834359333, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 276186147310727237, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
@@ -10868,12 +10868,17 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9199810544888545201, guid: c46d1cea794b9594c8123f9ebacdf189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9219340408834943530, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
       propertyPath: m_text
       value: 'Lorem
 
-        Ipsum'
+        Ispum'
       objectReference: {fileID: 0}
     - target: {fileID: 9219340408834943530, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
@@ -10923,7 +10928,7 @@ PrefabInstance:
     - target: {fileID: 9219340408834943530, guid: c46d1cea794b9594c8123f9ebacdf189,
         type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

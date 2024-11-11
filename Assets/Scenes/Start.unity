@@ -21682,7 +21682,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1946006707}
     m_Modifications:
     - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
@@ -21740,12 +21740,12 @@ PrefabInstance:
     - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.6486
+      value: 0.3513999
       objectReference: {fileID: 0}
     - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.8578
+      value: 18.464224
       objectReference: {fileID: 0}
     - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
@@ -22560,6 +22560,21 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: -4615878379340776379, guid: fe3ee76f04b9ee44587b50f733e4a056,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7277
+      objectReference: {fileID: 0}
+    - target: {fileID: -4615878379340776379, guid: fe3ee76f04b9ee44587b50f733e4a056,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1915
+      objectReference: {fileID: 0}
+    - target: {fileID: -4615878379340776379, guid: fe3ee76f04b9ee44587b50f733e4a056,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0905
+      objectReference: {fileID: 0}
     - target: {fileID: -4609744419101029723, guid: fe3ee76f04b9ee44587b50f733e4a056,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22593,7 +22608,7 @@ PrefabInstance:
     - target: {fileID: -4183073525775913704, guid: fe3ee76f04b9ee44587b50f733e4a056,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18
+      value: -0.204
       objectReference: {fileID: 0}
     - target: {fileID: -4183073525775913704, guid: fe3ee76f04b9ee44587b50f733e4a056,
         type: 3}
@@ -22639,6 +22654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: -3717665207913978138, guid: fe3ee76f04b9ee44587b50f733e4a056,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: -3717665207913978138, guid: fe3ee76f04b9ee44587b50f733e4a056,
         type: 3}
@@ -23015,6 +23035,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: -135153927553815696, guid: fe3ee76f04b9ee44587b50f733e4a056,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 586c0aa1381f72a47a4fc2252afb8244, type: 2}
     - target: {fileID: -109049710480587203, guid: fe3ee76f04b9ee44587b50f733e4a056,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23144,7 +23169,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b80e33631c745da4caa390a36c0ff334, type: 2}
+      objectReference: {fileID: 2100000, guid: 586c0aa1381f72a47a4fc2252afb8244, type: 2}
     - target: {fileID: 1511825277420096865, guid: fe3ee76f04b9ee44587b50f733e4a056,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23835,20 +23860,22 @@ PrefabInstance:
     - {fileID: 8854390790611156853, guid: fe3ee76f04b9ee44587b50f733e4a056, type: 3}
     - {fileID: -109049710480587203, guid: fe3ee76f04b9ee44587b50f733e4a056, type: 3}
     - {fileID: 767479950433162373, guid: fe3ee76f04b9ee44587b50f733e4a056, type: 3}
-    m_AddedGameObjects: []
+    - {fileID: -1785980901940244134, guid: fe3ee76f04b9ee44587b50f733e4a056, type: 3}
+    - {fileID: -3717665207913978138, guid: fe3ee76f04b9ee44587b50f733e4a056, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe3ee76f04b9ee44587b50f733e4a056,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1424288149}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe3ee76f04b9ee44587b50f733e4a056,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 979124551}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe3ee76f04b9ee44587b50f733e4a056,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 948892577}
-    - targetCorrespondingSourceObject: {fileID: -1785980901940244134, guid: fe3ee76f04b9ee44587b50f733e4a056,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 948892580}
-    - targetCorrespondingSourceObject: {fileID: -1785980901940244134, guid: fe3ee76f04b9ee44587b50f733e4a056,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 948892579}
   m_SourcePrefab: {fileID: 100100000, guid: fe3ee76f04b9ee44587b50f733e4a056, type: 3}
 --- !u!4 &948892575 stripped
 Transform:
@@ -23877,63 +23904,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3.8366184, y: 0.57, z: 2.7850084}
   m_Center: {x: -9.906893e-15, y: -0.008831596, z: 1.3925042}
---- !u!1 &948892578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -1785980901940244134, guid: fe3ee76f04b9ee44587b50f733e4a056,
-    type: 3}
-  m_PrefabInstance: {fileID: 948892574}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &948892579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948892578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef6676126f83674fb91733005850a73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Notatnik
-  Type: 0
-  State: 0
-  Locked: 0
-  KeyID: 0
-  NoteText: Lorem ipsum dolor sit amet
-  Animator: {fileID: 0}
-  OpeningAnimation: open
-  ClosingAnimation: close
-  Collider: {fileID: 948892580}
-  Light: {fileID: 0}
-  amount: 1
---- !u!65 &948892580
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948892578}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.11, y: 0.26, z: 0.21}
-  m_Center: {x: -5.838992e-15, y: -0.0040987628, z: 0.055000253}
 --- !u!1001 &958277302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24378,6 +24354,183 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4476188596202568700, guid: 3959c6a42b97faa4388e3e6ca46bb19e, type: 3}
+--- !u!1001 &979124550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 948892575}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8074962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7348
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1925
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.164
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4999998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5000004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_Name
+      value: book-mainmenu (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 979124554}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 979124553}
+  m_SourcePrefab: {fileID: 100100000, guid: 4dc6ddf5b539cde4695be4b9ed71f14c, type: 3}
+--- !u!4 &979124551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+    type: 3}
+  m_PrefabInstance: {fileID: 979124550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &979124552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+    type: 3}
+  m_PrefabInstance: {fileID: 979124550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &979124553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979124552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef6676126f83674fb91733005850a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Exham Priory cz. II
+  Type: 0
+  State: 0
+  Locked: 0
+  KeyID: 0
+  NoteText: "...Nie przekazywali\u015Bmy sobie \u017Cadnej rodzinnej tradycji; jedynym
+    jej \u015Bladem by\u0142\u0105 pewna zalakowania koperta, kt\xF3r\u0105 a\u017C
+    do wybuchu wojny secesyjnej ka\u017Cdy dziedzic przekazywa\u0142 swemu najstarszemu
+    synowi z przykazaniem, by otworzy\u0142 j\u0105 dopiero po jego \u015Bmierci.
+    Szczycili\u015Bmy sie jedynie tym, co osi\u0105gneli\u015Bmy na ameryka\u0144skiej
+    ziemi- byli\u015Bmy dumnym i powa\u017Canym rodem wirginijskich plantator\xF3w.
+    W czasie wojny odwr\xF3ci\u0142a si\u0119 od nas fortuna, gdy nasz dom zosta\u0142
+    podpalony przez \u017Co\u0142nierzy Unii. W po\u017Carze zgin\u0105\u0142 m\xF3j
+    dziadek, a wraz z nim rzeczona koperta- jedyna wi\u0119\u017A \u0142\u0105cz\u0105ca
+    nas z przesz\u0142o\u015Bci\u0105. Gdy wojna dobieg\u0142a ko\u0144ca, wyprowadzili\u015Bmy
+    si\u0119 do Massachusetts, rodzinnego stanu mojej matki; dorasta\u0142em przeto,
+    wchodzi\u0142em w wiek \u015Bredni i dorabia\u0142em si\u0119 maj\u0105tku ju\u017C
+    jako rozs\u0105dny, praktyczny Jankes. Syn m\xF3j, gdy w roku 1917 stacjonowa\u0142
+    w Anglii jako oficer lotnictwa, pozna\u0142 Edwarda Norrysa z Royal Flying Corps,
+    kt\xF3ry mieszka\u0142 niedaleko Exham, opowiedzia\u0142 mu o przes\u0105dach
+    rozpowszechnionych w\u015Br\xF3d okolicznego ch\u0142opstwa, tak ob\u0142\u0119dnych
+    i niewiarygodnych, \u017Ce bledn\u0105 przy nich wymys\u0142y najwyuzda\u0144szych
+    powie\u015Bciopisarzy. To w\u0142a\u015Bnie owe legendy ostatecznie skierowa\u0142y
+    m\u0105 uwag\u0119 ku europejskim przodkom i sprawi\u0142y, \u017Ce postanowi\u0142em
+    odkupi\u0107 i odrestaurowa\u0107 rodzinne gniazdo."
+  Animator: {fileID: 0}
+  OpeningAnimation: open
+  ClosingAnimation: close
+  Collider: {fileID: 0}
+  Light: {fileID: 0}
+  amount: 1
+--- !u!65 &979124554
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979124552}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29, y: 0.24, z: 0.06}
+  m_Center: {x: 0.0030407906, y: 8.6370256e-17, z: -2.8070333e-16}
 --- !u!1 &980365369
 GameObject:
   m_ObjectHideFlags: 0
@@ -36597,6 +36750,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!4 &1217304007 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 908572154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219426922
 GameObject:
   m_ObjectHideFlags: 0
@@ -42027,6 +42186,184 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1424288145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 948892575}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8074962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.39309546
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.18802309
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1640002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5000003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.49999988
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.49999985
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49999994
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_Name
+      value: book-mainmenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1424288148}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1424288147}
+  m_SourcePrefab: {fileID: 100100000, guid: 4dc6ddf5b539cde4695be4b9ed71f14c, type: 3}
+--- !u!1 &1424288146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1424288145}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1424288147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424288146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef6676126f83674fb91733005850a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Exham Priory cz. I
+  Type: 0
+  State: 0
+  Locked: 0
+  KeyID: 0
+  NoteText: "W zamku nie mieszka\u0142 nikt od czas\xF3w Jakuba I, kiedy to dziedzic
+    wraz z pi\u0119ciorgiem dzieci i kilkorgiem s\u0142u\u017C\u0105cych ponie\u015Bli
+    \u015Bmier\u0107 w tragicznych i nies\u0142ychanie ohydnych, cho\u0107 mocno
+    te\u017C niejasnych okoliczno\u015Bciach. Straszliwe podejrzenie pad\u0142o na
+    jedynego potomka, kt\xF3ry ocala\u0142, zachowuj\u0105c przy tym ci\u0105g\u0142o\u015B\u0107
+    rodu- trzeciego syna, mego przodka w prostej linii. Walter de la Poer zbieg\u0142
+    za ocean do Wirginii, i za\u0142o\u017Cy\u0142 tam rodzin\u0119, kt\xF3ra w nast\u0119pnym
+    stuleciu sta\u0142a si\u0119 znana jako Delapore'owie. Exham Priory pozosta\u0142o
+    niezamieszkane, acz p\xF3\u017Aniej, sta\u0142o si\u0119 przedmiotem bada\u0144
+    ze wzgledu na osobliw\u0105 wielowarstwowo\u015B\u0107 swej architektury: gotyckie
+    wie\u017Ce wznosi\u0142y si\u0119 na podbudowie sakso\u0144skiej i roma\u0144skiej,
+    ta za\u015B spoczywa\u0142a na fundamentach nale\u017C\u0105cyh po porz\u0105dk\xF3w
+    jeszcze starszych- je\u017Cli legendy nie k\u0142ami\u0105, mo\u017Ce nawet rzymskich,
+    druidycznych lub rdzennie cymryjskich. Fundamenty by\u0142y zreszt\u0105 wyj\u0105tkowe
+    same w sobie: z jednej strony przechodzi\u0142y p\u0142ynnie w lit\u0105 wapienn\u0105
+    \u015Bcian\u0119 urwiska g\xF3ruj\u0105cego nad pust\u0105, ja\u0142ow\u0105
+    dolin\u0105. Zamek Exham by\u0142 tedy dziwnym reliktem zapomnianych stuleci.
+    To, \u017Ce m\xF3j pierwszy ameryka\u0144ski przodek przyby\u0142 do kolonii
+    otoczony dziwnymi podejrzeniami, nie by\u0142o dla mnie tajemnic\u0105. Szczeg\xF3\u0142\xF3w
+    na temat historii mojego rodu nie zna\u0142em jednak \u017Cadnych, albowiem temat
+    dziej\xF3w rodzinnych zawsze by\u0142 u Delapore'\xF3w zbywany milczeniem..."
+  Animator: {fileID: 0}
+  OpeningAnimation: open
+  ClosingAnimation: close
+  Collider: {fileID: 0}
+  Light: {fileID: 0}
+  amount: 1
+--- !u!65 &1424288148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424288146}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29, y: 0.24, z: 0.06}
+  m_Center: {x: 0.0030407906, y: 8.6370256e-17, z: -2.8070333e-16}
+--- !u!4 &1424288149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4dc6ddf5b539cde4695be4b9ed71f14c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1424288145}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1425006962
 GameObject:
   m_ObjectHideFlags: 0
@@ -46074,6 +46411,127 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657075407}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1665225325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1946006707}
+    m_Modifications:
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: Name
+      value: kartka z Exham Priory cz. II
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: NoteText
+      value: "...m\xF3j syn wr\xF3ci\u0142 z wojny jako inwalida. \u017By\u0142 jeszcze
+        tylko dwa lata. I oto w roku 1921 zosta\u0142em sam, w \u017Calu i jako emerytowany
+        przemys\u0142owiec, ju\u017C niem\u0142ody, j\u0105\u0142em roz-l\u0105da\u0107
+        si\u0119 za kolejnym zaj\u0119ciem. W grudniu wybra\u0142em si\u0119 do kapitana
+        Norrysa i uzyska\u0142em ode\u0144 obietnic\u0119 pomocy w zbieraniu plan\xF3w
+        i anegdot maj\u0105cych pom\xF3c mi w kierowaniu odbudow\u0105. Sam zamek
+        to omsza\u0142e, rozchwie-rutane zwa\u0142owisko \u015Bredniowiecznych ruin,
+        w kt\xF3rym nie zachowa\u0142y si\u0119 nawet pod\u0142ogi ani stropy, a
+        jedynie kamienne mury maszt. Do XIII wieku, kiedy to kr\xF3l nada\u0142 memu
+        przodkowi, wtedy opactwo, czyni\u0105c ze\u0144 pierwszego barona Exham,
+        nie pojawiaj\u0105 si\u0119 \u017Cadne podejrzane wzmianki na temat mej rodziny,
+        potem jednak musia\u0142o si\u0119 zdarzy\u0107 co\u015B dziwnego. Jedna
+        z kronik wspomina, \u017Ce w roku 1307 de la Poer zosta\u0142 ,,przekety
+        przez Boga'', zamek za\u015B, wniesiony przeze\u0144 na fundamentach dawnej
+        \u015Bwi\u0105tyni i opactwa, zacz\u0105\u0142 budzi\u0107 w\u015Br\xF3d
+        miejscowych szale\u0144cz\u0105 trwog\u0119 jako siedlisko z\u0142a. Najbardziej
+        wszak\u017Ce sugestywna i dramatyczna by\u0142a opowie\u015B\u0107 o szczurach-
+        plugawej , wychudzonej, wy-g\u0142odnia\u0142ej armii, kt\xF3ra trzy miesi\u0105ce
+        po zbrodni Waltera de la Poer wynurzy\u0142a si\u0119 z opustosza\u0142ego
+        zamku- obmierz\u0142ej, nienasyconej armii, jaka z rozmro-wionym po tysi\u0105ckro\u0107
+        tupotem ruszy\u0142a przez wioski, po\u017Ceraj\u0105c wszystko, co stan\u0119\u0142o
+        jej na drodze: ptactwo, koty, psy, wieprze, owce, a nawet dwoje nieszcz\u0119snych
+        ludzi."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Name
+      value: note (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807127249579226876, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.802
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.678
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.19548668
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0037483226
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9806375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0110026635
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 202.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.175
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9, type: 3}
+--- !u!4 &1665225326 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8852291535319630338, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1665225325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666726347
 GameObject:
   m_ObjectHideFlags: 0
@@ -50934,6 +51392,8 @@ Transform:
   - {fileID: 316613823}
   - {fileID: 1221187521}
   - {fileID: 948892575}
+  - {fileID: 1217304007}
+  - {fileID: 1665225326}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949860242
@@ -59867,6 +60327,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 658747178751721955, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 658747178751721955, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1105358424986752527, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_Name
@@ -59961,6 +60431,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363459521459097910, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6669651956822868734, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
@@ -60147,4 +60622,3 @@ SceneRoots:
   - {fileID: 876531128}
   - {fileID: 297496910}
   - {fileID: 2100498633}
-  - {fileID: 908572154}
