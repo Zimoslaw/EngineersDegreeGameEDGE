@@ -354,7 +354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Czu\u0142o\u015B\u0107 myszki"
+  m_text: "Czu\u0142o\u015B\u0107 kamery"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ff307d0749dc3c4280e3d78c87a1cf7, type: 2}
   m_sharedMaterial: {fileID: -4788629219780097059, guid: 1ff307d0749dc3c4280e3d78c87a1cf7,

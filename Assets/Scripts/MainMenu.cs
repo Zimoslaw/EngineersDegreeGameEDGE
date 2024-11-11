@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         // Reseting all saved data
-        PlayerPrefs.SetInt("KeroseneLevel", 100);
+        PlayerPrefs.SetInt("KeroseneLevel", 200);
         PlayerPrefs.SetInt("LabyrinthSeed", -1);
 
         if (File.Exists(Application.persistentDataPath + "/inventory.json"))
