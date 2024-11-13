@@ -78,7 +78,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1
-  CurrentDestination: {x: 8, y: 0.1, z: 20}
+  CurrentDestination: {x: 16, y: 0.1, z: 4}
 --- !u!195 &4809710504082919509
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -97,10 +97,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
-  m_Height: 1
+  m_Height: 0.2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!1 &2986695285868696438
 GameObject:
   m_ObjectHideFlags: 0

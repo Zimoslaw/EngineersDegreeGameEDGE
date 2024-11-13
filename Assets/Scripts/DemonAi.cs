@@ -128,7 +128,7 @@ public class DemonAi : MonoBehaviour
     {
         if (!agent.IsUnityNull() && agent.isOnNavMesh)
         {
-            if(Vector3.Distance(agent.destination, CurrentDestination) > 0.1f)
+            if(Vector3.Distance(agent.destination, CurrentDestination) > 0.2f)
             {
                 agent.SetDestination(CurrentDestination);
                 Debug.Log("Nowy cel demona:" + agent.destination);
