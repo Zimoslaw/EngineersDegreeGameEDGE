@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Interactable : MonoBehaviour
 {
@@ -26,6 +28,7 @@ public class Interactable : MonoBehaviour
     public string ClosingAnimation = "close";
     public Collider Collider;
     public GameObject Light;
+    public AudioSource Sound;
     public int amount = 1; // for inventory
 
     public void Interact(GameObject Player)
@@ -49,6 +52,7 @@ public class Interactable : MonoBehaviour
                                 Locked = false;
                                 keyFound = true;
                                 Player.GetComponent<PlayerInventory>().items.Remove(item);
+                                if (!Sound.IsUnityNull()) Sound.Play();
                                 break;
                             }
                         }
@@ -61,6 +65,7 @@ public class Interactable : MonoBehaviour
 						Animator.Play(OpeningAnimation);
 						Collider.isTrigger = true;
 						State = 1;
+                        if (!Sound.IsUnityNull()) Sound.Play();
                     }
                 }
                 else
@@ -68,6 +73,7 @@ public class Interactable : MonoBehaviour
 					Animator.Play(ClosingAnimation);
 					Collider.isTrigger = false;
 					State = 0;
+                    if (!Sound.IsUnityNull()) Sound.Play();
                 }
                 break;
             case InteractableTypeEnum.Light:
@@ -81,20 +87,35 @@ public class Interactable : MonoBehaviour
                     State = 0;
                     Light.SetActive(false);
                 }
+                if(!Sound.IsUnityNull()) Sound.Play();
                 break;
             case InteractableTypeEnum.Kerosene:
+                StartCoroutine(nameof(PlayAndDeactivate));
                 Player.GetComponent<PlayerInventory>().PutItem(gameObject.GetComponent<Interactable>());
-                gameObject.SetActive(false);
                 break;
             case InteractableTypeEnum.Key:
+                StartCoroutine(nameof(PlayAndDeactivate));
                 Player.GetComponent<PlayerInventory>().PutItem(gameObject.GetComponent<Interactable>());
-                gameObject.SetActive(false);
                 break;
             case InteractableTypeEnum.Note:
                 Player.GetComponent<InteractionController>().ShowNote(NoteText);
+                if (!Sound.IsUnityNull()) Sound.Play();
                 break;
             case InteractableTypeEnum.Info:
                 break;
         }
+    }
+
+    IEnumerator PlayAndDeactivate()
+    {
+        if (!Sound.IsUnityNull())
+        {
+            Sound.Play();
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            yield return new WaitWhile(() => Sound.isPlaying);
+            
+        }
+        gameObject.SetActive(false);
     }
 }

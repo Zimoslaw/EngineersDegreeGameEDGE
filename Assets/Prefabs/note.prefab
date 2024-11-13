@@ -136,6 +136,9 @@ MonoBehaviour:
   OpeningAnimation: open
   ClosingAnimation: close
   Collider: {fileID: 0}
+  Light: {fileID: 0}
+  Sound: {fileID: 0}
+  amount: 1
 --- !u!65 &8807127249579226876
 BoxCollider:
   m_ObjectHideFlags: 0
