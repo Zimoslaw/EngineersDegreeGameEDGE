@@ -183,8 +183,9 @@ public class PlayerControl : MonoBehaviour
                 _sprintTimer = 0;
         }
 
-
-        _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * (2 * _movementSpeed * sprintMultiplier - (currentSpeed * 50)) * verticalAxis * transform.forward);
+        float counterForce = (2 * _movementSpeed * sprintMultiplier - (currentSpeed * 50));
+        if (counterForce >= 0)
+            _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * counterForce * verticalAxis * transform.forward);
 
         _rigidBody.AddForce(sideMultiplier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * horizontalAxis * transform.right);
 
