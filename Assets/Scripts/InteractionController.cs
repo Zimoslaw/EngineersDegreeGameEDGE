@@ -12,6 +12,7 @@ public class InteractionController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _interactableAction;
     [SerializeField] private GameObject _note;
     [SerializeField] private TextMeshProUGUI _noteText;
+    [SerializeField] private AudioSource _audioSource;
 
     public bool IsPaused = false;
     public bool IsReadingNote = false; // Is Player reading a note?
@@ -109,6 +110,7 @@ public class InteractionController : MonoBehaviour
                 IsInventoryOpen = true;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                _audioSource.Play();
             }
         }
 

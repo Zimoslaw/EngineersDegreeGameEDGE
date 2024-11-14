@@ -36,11 +36,18 @@ public class PlayerControl : MonoBehaviour
     private float _sprintTimer = 0;
 
     // Menus UI
-    [SerializeField] private GameObject[] menus;
+    [SerializeField] private GameObject[] _menus;
 
     [SerializeField] private PlayableDirector _gameOverTimeline;
 
-    // Start is called before the first frame update
+    // Menu audio
+    [SerializeField] private AudioSource _pauseMenuAudio;
+
+    // Steps audio
+    [SerializeField] private AudioSource _stepsAudio;
+    [SerializeField] private AudioClip _walkingSteps;
+    [SerializeField] private AudioClip _runningSteps;
+
     void Start()
     {
         _rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -67,10 +74,30 @@ public class PlayerControl : MonoBehaviour
             Pause();
         }
 
-        // Head animation
+        // Steps sounds and head animation
+        float _speed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
+
+        if (_speed > 2.5f)
+        {
+            _stepsAudio.clip = _runningSteps;
+        }
+        else
+        {
+            _stepsAudio.clip = _walkingSteps;
+        }
+
+        if (_speed > 0.1f)
+        {
+            if (!_stepsAudio.isPlaying)
+                _stepsAudio.Play();
+        }
+        else
+        {
+            _stepsAudio.Stop();
+        }
+
         if (_animator.IsInTransition(0))
             return;
-        float _speed = Vector3.Distance(Vector3.zero, _rigidBody.velocity);
         if (_speed > 0.1f)
         {
             _animator.SetFloat("WalkingSpeed", _speed / 2.24f);
@@ -186,18 +213,19 @@ public class PlayerControl : MonoBehaviour
     // Pause or unpause
     public void Pause()
     {
-        if (!menus[0].activeInHierarchy)
+        if (!_menus[0].activeInHierarchy)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             _playerCamera.gameObject.GetComponent<InteractionController>().IsPaused = true;
             Time.timeScale = 0;
-            menus[0].SetActive(true);
+            _menus[0].SetActive(true);
+            _pauseMenuAudio.Play();
         }
         else
         {
-            menus[0].SetActive(false);
-            menus[1].SetActive(false);
+            _menus[0].SetActive(false);
+            _menus[1].SetActive(false);
             Time.timeScale = 1;
             _playerCamera.gameObject.GetComponent<InteractionController>().IsPaused = false;
             if (!_playerCamera.gameObject.GetComponent<InteractionController>().IsInventoryOpen)

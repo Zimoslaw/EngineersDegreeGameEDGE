@@ -691,6 +691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
+      propertyPath: Sound
+      value: 
+      objectReference: {fileID: 3839607123138742155}
+    - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
+        type: 3}
       propertyPath: NoteText
       value: "         On ci\u0119 widzi...                                                   
         on ci\u0119 s\u0142yszy...                                                                                                              

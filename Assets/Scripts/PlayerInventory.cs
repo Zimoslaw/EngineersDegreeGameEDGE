@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private KeroseneLamp _lamp;
     [SerializeField] private GameObject _inventoryBackground;
     [SerializeField] private GameObject _inventoryItem;
+    [SerializeField] private AudioSource _audioSource;
 
     void Start()
     {
@@ -78,6 +79,7 @@ public class PlayerInventory : MonoBehaviour
                                 break;
                         }
                     }
+                    _audioSource.Play();
                 }
                     else
                 {
