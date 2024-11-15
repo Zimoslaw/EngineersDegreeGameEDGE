@@ -15,7 +15,7 @@ public class MultiTrigger : MonoBehaviour
     private Animator[] animatorsToPlay;
 
     [SerializeField]
-    private AudioClip[] soundsToPlay;
+    private AudioSource[] soundsToPlay;
 
     [SerializeField]
     private string subtitlesToShow;
@@ -65,17 +65,13 @@ public class MultiTrigger : MonoBehaviour
 
     void Sounds()
     {
-        if (gameObject.TryGetComponent<AudioSource>(out AudioSource source))
+        if (soundsToPlay.Length > 0)
         {
-            if (soundsToPlay.Length > 0)
+            foreach (AudioSource sound in soundsToPlay)
             {
-                foreach (AudioClip clip in soundsToPlay)
+                if (!sound.isPlaying)
                 {
-                    if (!source.isPlaying)
-                    {
-                        source.clip = clip;
-                        source.Play();
-                    }
+                    sound.Play();
                 }
             }
         }
