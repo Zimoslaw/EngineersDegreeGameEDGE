@@ -28,6 +28,12 @@ public class LabyrinthGenerator : MonoBehaviour
 	[SerializeField]
     private GameObject[] cellsPrefabs;
 
+    [SerializeField]
+    private GameObject scaringSoundPrefab;
+
+    [SerializeField]
+    private AudioClip[] scaringSounds;
+
     public (int z, int x) startCell;
     public (int z, int x) exitCell;
 	public (int z, int x) extraExitCell;
@@ -49,6 +55,8 @@ public class LabyrinthGenerator : MonoBehaviour
         {
             NavMeshBaking();
         }
+
+        InstantiateScaringSounds(4);
     }
 
     /// <summary>
@@ -279,6 +287,22 @@ public class LabyrinthGenerator : MonoBehaviour
             } 
         }
         UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
+    }
+
+    /// <summary>
+    /// Instantiates scaring sounds in random cells.
+    /// </summary>
+    /// <param name="amount">Number of triggers to instantiate</param>
+    private void InstantiateScaringSounds(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            int soundIndex = UnityEngine.Random.Range(0, scaringSounds.Length);
+            int x = UnityEngine.Random.Range(0, labyrinthSize);
+            int z = UnityEngine.Random.Range(0, labyrinthSize);
+            var copy = Instantiate(scaringSoundPrefab, new Vector3(x * 4, 1, z * 4), Quaternion.identity, gameObject.transform);
+            copy.GetComponent<AudioSource>().clip = scaringSounds[soundIndex];
+        }
     }
 
     /// <summary>

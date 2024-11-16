@@ -8,9 +8,15 @@ public class DemonAi : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
     LabyrinthGenerator labyrinth;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] demonSounds;
     bool isChasingPlayer = false;
 
     int labyrinthSize = 5;
+    int randomSoundtimer = 0;
+    int randomSoundInterval = 1;
+    int heardSoundTimer = 50;
+    int sawSoundTimer = 10;
 
     public float ViewRadius = 16f;
     public float ViewAngle = 180f;
@@ -28,8 +34,11 @@ public class DemonAi : MonoBehaviour
         if (!labyrinth.IsUnityNull())
             labyrinthSize = labyrinth.labyrinthSize;
 
+        randomSoundInterval = UnityEngine.Random.Range(3, 20);
+
         StartCoroutine(nameof(LookForDestinationWithDelay), 0.2f);
         StartCoroutine(nameof(ListenToSteps), 2f);
+        StartCoroutine(nameof(PlayRandomSound));
     }
 
     IEnumerator LookForDestinationWithDelay(float delay)
@@ -52,6 +61,23 @@ public class DemonAi : MonoBehaviour
         }
     }
 
+    IEnumerator PlayRandomSound()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            randomSoundtimer++;
+            if (randomSoundtimer >= randomSoundInterval)
+            {
+                audioSource.clip = demonSounds[UnityEngine.Random.Range(2, demonSounds.Length)];
+                audioSource.Play();
+                randomSoundInterval = UnityEngine.Random.Range(3, 20);
+                randomSoundtimer = 0;
+                Debug.Log("Demon wydał " + audioSource.clip.name + " dźwięk");
+            }
+        }
+    }
+
     void LookForPlayer()
     {
 		GameObject lamp = GameObject.FindGameObjectWithTag("PlayerLamp");
@@ -64,6 +90,13 @@ public class DemonAi : MonoBehaviour
                 {
                     CurrentDestination = player.transform.position;
                     isChasingPlayer = true;
+                    sawSoundTimer++;
+                    if (sawSoundTimer >= 10)
+                    {
+                        audioSource.clip = demonSounds[1];
+                        audioSource.Play();
+                        sawSoundTimer = 0;
+                    }
                     Debug.Log("Podążam za graczem bez nafty");
                     return;
                 }
@@ -78,16 +111,20 @@ public class DemonAi : MonoBehaviour
             if (collider.CompareTag("Player"))
             {
                 Vector3 directionToPlayer = (collider.transform.position - transform.position).normalized;
-                //if (Vector3.Angle(transform.forward, directionToPlayer) < ViewAngle / 2)
-                //{
-                    float distanceToPlayer = Vector3.Distance(transform.position, collider.transform.position);
-                    if (!Physics.Raycast(transform.position, directionToPlayer, distanceToPlayer, obstacleMask))
+                float distanceToPlayer = Vector3.Distance(transform.position, collider.transform.position);
+                if (!Physics.Raycast(transform.position, directionToPlayer, distanceToPlayer, obstacleMask))
+                {
+                    CurrentDestination = collider.transform.position;
+                    isChasingPlayer = true;
+                    sawSoundTimer++;
+                    if (sawSoundTimer >= 50)
                     {
-                        CurrentDestination = collider.transform.position;
-                        isChasingPlayer = true;
-                        Debug.Log("Gracz zauważony");
+                        audioSource.clip = demonSounds[1];
+                        audioSource.Play();
+                        sawSoundTimer = 0;
                     }
-                //}
+                    Debug.Log("Gracz zauważony");
+                }
             }
         }
     }
@@ -115,10 +152,17 @@ public class DemonAi : MonoBehaviour
             {
                 if (Vector3.Distance(Vector3.zero, collider.GetComponent<Rigidbody>().velocity) > 0.1f)
                 {
-                    Debug.Log("Gracz usłyszany");
                     float z = collider.transform.position.z + UnityEngine.Random.Range(-4f, 4f);
                     float x = collider.transform.position.x + UnityEngine.Random.Range(-4f, 4f);
                     CurrentDestination = new Vector3(x, 0.1f, z);
+                    heardSoundTimer++;
+                    if (heardSoundTimer >= 50)
+                    {
+                        audioSource.clip = demonSounds[0];
+                        audioSource.Play();
+                        heardSoundTimer = 0;
+                    }
+                    Debug.Log("Gracz usłyszany");
                 }
             }
         }

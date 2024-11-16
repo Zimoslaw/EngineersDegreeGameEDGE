@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5823617950324909332}
   - component: {fileID: 4809710504082919509}
   - component: {fileID: -1449681097147087655}
+  - component: {fileID: 727240247603330460}
   m_Layer: 7
   m_Name: Demon
   m_TagString: Demon
@@ -70,6 +71,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4809710504082919509}
+  audioSource: {fileID: 727240247603330460}
+  demonSounds:
+  - {fileID: 8300000, guid: dd5784c9bee2eeb4c8f0d2949e1ea268, type: 3}
+  - {fileID: 8300000, guid: b01552534a94f7b42a6e71449a1fa9b1, type: 3}
+  - {fileID: 8300000, guid: c7890a88224b61c498e1e7fa9def65ea, type: 3}
+  - {fileID: 8300000, guid: 832d8514e65fb704388d4edecb604e2f, type: 3}
+  - {fileID: 8300000, guid: 0c93ebbce08b0a048acc91fd71079c2a, type: 3}
+  - {fileID: 8300000, guid: 552adfb32835b154190af08278758248, type: 3}
   ViewRadius: 16
   ViewAngle: 345
   HearRadius: 12
@@ -79,7 +88,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1
-  CurrentDestination: {x: 16, y: 0.1, z: 4}
+  CurrentDestination: {x: 8, y: 0.1, z: 8}
 --- !u!195 &4809710504082919509
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -174,6 +183,139 @@ AudioSource:
       value: 0
       inSlope: -0.062525
       outSlope: -0.062525
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &727240247603330460
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2834146078463878795}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4352101649017724453, guid: bf4e723ba421fc44c915164766441dbb,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.737
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.055555556
+      value: 1
+      inSlope: -18.007198
+      outSlope: -18.007198
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.10263867
+      value: 0.5083313
+      inSlope: -4.5017996
+      outSlope: -4.5017996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.19397058
+      value: 0.2416687
+      inSlope: -1.1254499
+      outSlope: -1.1254499
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3907793
+      value: 0.091659546
+      inSlope: -0.28136247
+      outSlope: -0.28136247
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.80978733
+      value: 0.020812988
+      inSlope: -0.07034062
+      outSlope: -0.07034062
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.0555777
+      outSlope: -0.0555777
       tangentMode: 0
       weightedMode: 0
       inWeight: 0

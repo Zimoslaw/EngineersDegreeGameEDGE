@@ -1923,6 +1923,13 @@ MonoBehaviour:
   - {fileID: 475653879666974214, guid: 530bdf9a135e130418e10a1e1ca6481d, type: 3}
   - {fileID: 4954715380720505071, guid: cc56b425765fa5049a363ee52ba825b7, type: 3}
   - {fileID: 5566845721581356623, guid: c24055ca44df7714d9b4e9c666b1318b, type: 3}
+  scaringSoundPrefab: {fileID: 2481925946447837927, guid: 3300d0a7117d5ef4090d1f411c3d7ebe,
+    type: 3}
+  scaringSounds:
+  - {fileID: 8300000, guid: 47dfb34feef80ac49a3fff26e3c5d7d5, type: 3}
+  - {fileID: 8300000, guid: f1c6ea8a5a0532d46a7860056e139abd, type: 3}
+  - {fileID: 8300000, guid: 5c16038ecd9aa2c41a024d14a63f0254, type: 3}
+  - {fileID: 8300000, guid: 74d3ecca5c55abb4bbd436946928f95d, type: 3}
   demon: {fileID: 2834146078463878795, guid: f48000c29e008bc4daeee2cf62d94adb, type: 3}
 --- !u!4 &769188211
 Transform:
@@ -2653,8 +2660,13 @@ PlayableDirector:
     value: {fileID: 1767232140}
   - key: {fileID: 3820256661746880216, guid: 18da266c17bc71b4da6cdad91e6903f3, type: 2}
     value: {fileID: 1767232139}
+  - key: {fileID: 2056721729774158891, guid: 18da266c17bc71b4da6cdad91e6903f3, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2468728183612918148, guid: 18da266c17bc71b4da6cdad91e6903f3, type: 2}
+    value: {fileID: 1233945406}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - a80bb47cd3a3e8d4a823d38cac1df42a: {fileID: 1233945406}
 --- !u!4 &1171125733
 Transform:
   m_ObjectHideFlags: 0
@@ -2872,6 +2884,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 671235832}
   m_LocalEulerAnglesHint: {x: -2.098, y: 0, z: 2.346}
+--- !u!1 &1233945406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5716537626904717865, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1767232134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1243651829
 GameObject:
   m_ObjectHideFlags: 0
@@ -5671,7 +5689,9 @@ MonoBehaviour:
   objectsToDeactivate: []
   animatorsToPlay:
   - {fileID: 1441290732}
-  soundsToPlay: []
+  soundsToPlay:
+  - {fileID: 2144819841}
+  - {fileID: 1931721337}
   subtitlesToShow: 
   subtitlesTime: 4
 --- !u!65 &1980927995
