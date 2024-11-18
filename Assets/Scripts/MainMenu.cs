@@ -41,7 +41,7 @@ public class MainMenu : MonoBehaviour
 
         if (!PlayerPrefs.HasKey("MouseSensitivity"))
         {
-            PlayerPrefs.SetInt("MouseSensitivity", 4);
+            PlayerPrefs.SetInt("MouseSensitivity", 5);
         }
         else
         {

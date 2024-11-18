@@ -222,6 +222,7 @@ public class PlayerControl : MonoBehaviour
             Time.timeScale = 0;
             _menus[0].SetActive(true);
             _pauseMenuAudio.Play();
+            _stepsAudio.mute = true;
         }
         else
         {
@@ -234,6 +235,7 @@ public class PlayerControl : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
+            _stepsAudio.mute = false;
         }
     }
 

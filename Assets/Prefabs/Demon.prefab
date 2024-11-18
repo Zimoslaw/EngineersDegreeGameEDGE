@@ -88,7 +88,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1
-  CurrentDestination: {x: 20, y: 0.1, z: 8}
+  CurrentDestination: {x: 12, y: 0.1, z: 8}
 --- !u!195 &4809710504082919509
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 2
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -657,6 +657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 72.57271
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869106973686249367, guid: f6a82d435663472419fa5c9c3018831c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4091493912598570861, guid: f6a82d435663472419fa5c9c3018831c,
         type: 3}

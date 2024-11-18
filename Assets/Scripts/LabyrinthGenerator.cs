@@ -345,7 +345,7 @@ public class LabyrinthGenerator : MonoBehaviour
     /// </summary>
     public void InstantiateDemon()
     {
-        Instantiate(demon, new Vector3(exitCell.x * 4 + 1, 0.1f, exitCell.z * 4 + 1), Quaternion.identity);
+        Instantiate(demon, new Vector3(exitCell.x * 4 + 1, 0.1f, exitCell.z * 4 + 1), Quaternion.identity, gameObject.transform);
 
         demon.GetComponent<DemonAi>().CurrentDestination = new Vector3(startCell.x * 4, 0.1f, startCell.z * 4);
     }

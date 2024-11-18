@@ -1611,7 +1611,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -28023,7 +28023,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -46882,47 +46882,29 @@ AudioSource:
     - serializedVersion: 3
       time: 0.11456146
       value: 1
-      inSlope: -8.7324295
-      outSlope: -8.7324295
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.19240265
-      value: 0.47084045
-      inSlope: -2.1831074
-      outSlope: -2.1831074
+      time: 0.3029287
+      value: 0.23051196
+      inSlope: -1.0499777
+      outSlope: -1.0499777
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.40174255
-      value: 0.14582825
-      inSlope: -0.54577684
-      outSlope: -0.54577684
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.8345825
-      value: 0.037506104
-      inSlope: -0.13644421
-      outSlope: -0.13644421
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.13664655
     - serializedVersion: 3
       time: 1
-      value: 0.018736266
-      inSlope: -0.114607066
-      outSlope: -0.114607066
+      value: 0
+      inSlope: -0.12464788
+      outSlope: -0.12464788
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.3173074
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -56237,6 +56219,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a320ed0181bff584d85574d39269f57a,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a320ed0181bff584d85574d39269f57a,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a320ed0181bff584d85574d39269f57a,

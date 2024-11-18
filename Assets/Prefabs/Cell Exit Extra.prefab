@@ -473,7 +473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7596900368618519477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cell Exit Extra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,6 +1421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: exit-cell
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1c7432a2aaab4e41ac7bb7c8ec4edea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
