@@ -33,9 +33,15 @@ public class EndTrigger : MonoBehaviour
 
             newCameraPosition.LookAt(demon);
 
+            demon.LookAt(newCameraPosition);
+
+            demon.Rotate(new Vector3(80, 0, 0));
+
             cameraMoving = true;
 
             timeline.Play();
+
+            demon.gameObject.GetComponentInChildren<Animator>().Play("demon-end");
         }
     }
 
