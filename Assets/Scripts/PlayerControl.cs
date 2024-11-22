@@ -185,9 +185,10 @@ public class PlayerControl : MonoBehaviour
 
         float counterForce = (2 * _movementSpeed * sprintMultiplier - (currentSpeed * 50));
         if (counterForce >= 0)
+        {
             _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * counterForce * verticalAxis * transform.forward);
-
-        _rigidBody.AddForce(sideMultiplier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * horizontalAxis * transform.right);
+            _rigidBody.AddForce(sideMultiplier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * horizontalAxis * transform.right);
+        }
 
         // Move cameraObject
         _playerCamera.transform.position = transform.position + _cameraPositionOffset;

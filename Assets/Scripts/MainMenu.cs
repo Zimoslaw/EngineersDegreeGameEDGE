@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        // Reseting all saved data
+        // Setting defaults for player settings
         PlayerPrefs.SetInt("KeroseneLevel", 200);
         PlayerPrefs.SetInt("LabyrinthSeed", -1);
 

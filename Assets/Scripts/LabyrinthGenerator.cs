@@ -5,7 +5,7 @@ using System.Linq;
 using Unity.AI.Navigation;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class LabyrinthGenerator : MonoBehaviour
 {
@@ -73,8 +73,9 @@ public class LabyrinthGenerator : MonoBehaviour
             PlayerPrefs.SetInt("LabyrinthSeed", seed);
         }
 
-        UnityEngine.Random.InitState(seed);
+        Random.InitState(seed);
 
+        // Initiate 2D array
         cells = new Cell[labyrinthSize, labyrinthSize];
         for (int z = 0; z < labyrinthSize; z++)
         {
@@ -84,11 +85,12 @@ public class LabyrinthGenerator : MonoBehaviour
             }
         }
 
-        var _coordStack = new List<(int z, int x)>(); // Cells stack
+        // Cells stack
+        var _coordStack = new List<(int z, int x)>();
 
         // Select random cell to start with and add it to the stack
-        startCell.z = UnityEngine.Random.Range(1, labyrinthSize - 1);
-        startCell.x = UnityEngine.Random.Range(1, labyrinthSize - 1);
+        startCell.z = Random.Range(1, labyrinthSize - 1);
+        startCell.x = Random.Range(1, labyrinthSize - 1);
         cells[startCell.z, startCell.x].visited = true;
         _coordStack.Add((startCell.z, startCell.x));
 
@@ -98,15 +100,16 @@ public class LabyrinthGenerator : MonoBehaviour
         // Move exit trigger to exit cell
         exitTrigger.transform.position = new Vector3(exitCell.x * 4, 0, exitCell.z * 4);
 
-        // Calculate coords od extra exit cell
+        // Calculate coords of extra exit cell
         do
         {
-            extraExitCell.z = UnityEngine.Random.Range(1, labyrinthSize - 1);
+            extraExitCell.z = Random.Range(1, labyrinthSize - 1);
         } while(extraExitCell.z == startCell.z || extraExitCell.z == exitCell.z);
 		do
 		{
-			extraExitCell.x = UnityEngine.Random.Range(1, labyrinthSize - 1);
+			extraExitCell.x = Random.Range(1, labyrinthSize - 1);
 		} while(extraExitCell.x == startCell.x || extraExitCell.x == exitCell.x);
+
 		// Move exit trigger to exit cell
 		extraExitTrigger.transform.position = new Vector3(extraExitCell.x * 4, 0, extraExitCell.z * 4);
 
@@ -171,7 +174,7 @@ public class LabyrinthGenerator : MonoBehaviour
             {
                 Cell cell = cells[z, x];
 
-                int indexMultiplier = UnityEngine.Random.Range(0, 4);
+                int indexMultiplier = Random.Range(0, 4);
 
                 //Starting cell
                 if (startCell.z == z && startCell.x == x)
@@ -286,7 +289,7 @@ public class LabyrinthGenerator : MonoBehaviour
                 }
             } 
         }
-        UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
+        Random.InitState((int)DateTime.Now.Ticks);
     }
 
     /// <summary>
@@ -297,9 +300,9 @@ public class LabyrinthGenerator : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            int soundIndex = UnityEngine.Random.Range(0, scaringSounds.Length);
-            int x = UnityEngine.Random.Range(0, labyrinthSize);
-            int z = UnityEngine.Random.Range(0, labyrinthSize);
+            int soundIndex = Random.Range(0, scaringSounds.Length);
+            int x = Random.Range(0, labyrinthSize);
+            int z = Random.Range(0, labyrinthSize);
             var copy = Instantiate(scaringSoundPrefab, new Vector3(x * 4, 1, z * 4), Quaternion.identity, gameObject.transform);
             copy.GetComponent<AudioSource>().clip = scaringSounds[soundIndex];
         }
@@ -327,7 +330,7 @@ public class LabyrinthGenerator : MonoBehaviour
         if (neighbours.Count == 0)
             return 255;
 
-        byte chosen = neighbours.ElementAt((byte)UnityEngine.Random.Range(0, neighbours.Count));
+        byte chosen = neighbours.ElementAt((byte)Random.Range(0, neighbours.Count));
 
         return chosen;
     }

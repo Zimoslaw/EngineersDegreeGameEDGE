@@ -21052,8 +21052,8 @@ MonoBehaviour:
   animatorsToPlay: []
   soundsToPlay:
   - {fileID: 1424170881}
-  subtitlesToShow: "To musi byc miejsce, kt\xF3rego wychodz\u0105 te szczury! Musz\u0119
-    znale\u017A\u0107 spos\xF3b na odsuni\u0119cie tego o\u0142tarza."
+  subtitlesToShow: "To musi by\u0107 miejsce, kt\xF3rego wychodz\u0105 te szczury!
+    Musz\u0119 znale\u017A\u0107 spos\xF3b na odsuni\u0119cie tego o\u0142tarza."
   subtitlesTime: 4
 --- !u!65 &670034176
 BoxCollider:

@@ -33,7 +33,7 @@ public class PlayerInventory : MonoBehaviour
                     Interactable item = itemObject.AddComponent<Interactable>();
 
                     JsonUtility.FromJsonOverwrite(line, item);
-                    item.Interact(gameObject);
+                    PutItem(item);
                 }
             }
         }
