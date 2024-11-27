@@ -247,7 +247,7 @@ public class PlayerControl : MonoBehaviour
         {
             _playerCamera.gameObject.GetComponent<InteractionController>().IsReadingNote = true;
             other.GetComponent<NavMeshAgent>().isStopped = true;
-            _playerCamera.transform.LookAt(other.transform.position + new Vector3(0, 3.1f, 0));
+            _playerCamera.transform.LookAt(other.transform.position + new Vector3(0, 2.6f, 0));
             _gameOverTimeline.Play();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
