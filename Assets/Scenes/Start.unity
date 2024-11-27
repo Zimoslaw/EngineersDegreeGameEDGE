@@ -21314,7 +21314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &682104776
 Transform:
   m_ObjectHideFlags: 0
@@ -21347,7 +21347,7 @@ MonoBehaviour:
   animatorsToPlay: []
   soundsToPlay: []
   subtitlesToShow: "Bez przerwy s\u0142ysz\u0119 te szczury. Tej nocy odkryj\u0119
-    sk\u0105d si\u0119 bior\u0105, cho\u0107bym mia\u0142 zej\u015B\u0107 do najg\u0142ebszych
+    sk\u0105d si\u0119 bior\u0105, cho\u0107bym mia\u0142 zej\u015B\u0107 do najg\u0142\u0119bszych
     czelu\u015Bci!"
   subtitlesTime: 6
 --- !u!65 &682104778
@@ -27866,8 +27866,8 @@ MonoBehaviour:
   Locked: 0
   KeyID: 0
   NoteText: "...Nie przekazywali\u015Bmy sobie \u017Cadnej rodzinnej tradycji; jedynym
-    jej \u015Bladem by\u0142\u0105 pewna zalakowania koperta, kt\xF3r\u0105 a\u017C
-    do wybuchu wojny secesyjnej ka\u017Cdy dziedzic przekazywa\u0142 swemu najstarszemu
+    jej \u015Bladem by\u0142a pewna zalakowana koperta, kt\xF3r\u0105 a\u017C do
+    wybuchu wojny secesyjnej ka\u017Cdy dziedzic przekazywa\u0142 swemu najstarszemu
     synowi z przykazaniem, by otworzy\u0142 j\u0105 dopiero po jego \u015Bmierci.
     Szczycili\u015Bmy sie jedynie tym, co osi\u0105gneli\u015Bmy na ameryka\u0144skiej
     ziemi- byli\u015Bmy dumnym i powa\u017Canym rodem wirginijskich plantator\xF3w.
@@ -34538,6 +34538,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121085171}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1123707505 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4918760264805601671, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7757209697478797457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1131947921
 GameObject:
   m_ObjectHideFlags: 0
@@ -46922,7 +46928,7 @@ MonoBehaviour:
   State: 0
   Locked: 0
   KeyID: 0
-  NoteText: "W zamku nie mieszka\u0142 nikt od czas\xF3w Jakuba I, kiedy to dziedzic
+  NoteText: "    W zamku nie mieszka\u0142 nikt od czas\xF3w Jakuba I, kiedy to dziedzic
     wraz z pi\u0119ciorgiem dzieci i kilkorgiem s\u0142u\u017C\u0105cych ponie\u015Bli
     \u015Bmier\u0107 w tragicznych i nies\u0142ychanie ohydnych, cho\u0107 mocno
     te\u017C niejasnych okoliczno\u015Bciach. Straszliwe podejrzenie pad\u0142o na
@@ -46931,18 +46937,19 @@ MonoBehaviour:
     za ocean do Wirginii, i za\u0142o\u017Cy\u0142 tam rodzin\u0119, kt\xF3ra w nast\u0119pnym
     stuleciu sta\u0142a si\u0119 znana jako Delapore'owie. Exham Priory pozosta\u0142o
     niezamieszkane, acz p\xF3\u017Aniej, sta\u0142o si\u0119 przedmiotem bada\u0144
-    ze wzgledu na osobliw\u0105 wielowarstwowo\u015B\u0107 swej architektury: gotyckie
-    wie\u017Ce wznosi\u0142y si\u0119 na podbudowie sakso\u0144skiej i roma\u0144skiej,
-    ta za\u015B spoczywa\u0142a na fundamentach nale\u017C\u0105cyh po porz\u0105dk\xF3w
-    jeszcze starszych- je\u017Cli legendy nie k\u0142ami\u0105, mo\u017Ce nawet rzymskich,
-    druidycznych lub rdzennie cymryjskich. Fundamenty by\u0142y zreszt\u0105 wyj\u0105tkowe
-    same w sobie: z jednej strony przechodzi\u0142y p\u0142ynnie w lit\u0105 wapienn\u0105
-    \u015Bcian\u0119 urwiska g\xF3ruj\u0105cego nad pust\u0105, ja\u0142ow\u0105
-    dolin\u0105. Zamek Exham by\u0142 tedy dziwnym reliktem zapomnianych stuleci.
-    To, \u017Ce m\xF3j pierwszy ameryka\u0144ski przodek przyby\u0142 do kolonii
-    otoczony dziwnymi podejrzeniami, nie by\u0142o dla mnie tajemnic\u0105. Szczeg\xF3\u0142\xF3w
-    na temat historii mojego rodu nie zna\u0142em jednak \u017Cadnych, albowiem temat
-    dziej\xF3w rodzinnych zawsze by\u0142 u Delapore'\xF3w zbywany milczeniem..."
+    ze wzgl\u0119du na osobliw\u0105 wielowarstwowo\u015B\u0107 swej architektury:
+    gotyckie wie\u017Ce wznosi\u0142y si\u0119 na podbudowie sakso\u0144skiej i roma\u0144skiej,
+    ta za\u015B spoczywa\u0142a na fundamentach nale\u017C\u0105cych do porz\u0105dk\xF3w
+    jeszcze starszych- je\u017Celi legendy nie k\u0142ami\u0105, mo\u017Ce nawet
+    rzymskich, druidycznych lub rdzennie cymryjskich. Fundamenty by\u0142y zreszt\u0105
+    wyj\u0105tkowe same w sobie: z jednej strony przechodzi\u0142y p\u0142ynnie w
+    lit\u0105 wapienn\u0105 \u015Bcian\u0119 urwiska g\xF3ruj\u0105cego nad pust\u0105,
+    ja\u0142ow\u0105 dolin\u0105. Zamek Exham by\u0142 tedy dziwnym reliktem zapomnianych
+    stuleci. To, \u017Ce m\xF3j pierwszy ameryka\u0144ski przodek przyby\u0142 do
+    kolonii otoczony dziwnymi podejrzeniami, nie by\u0142o dla mnie tajemnic\u0105.
+    Szczeg\xF3\u0142\xF3w na temat historii mojego rodu nie zna\u0142em jednak \u017Cadnych,
+    albowiem temat dziej\xF3w rodzinnych zawsze by\u0142 u Delapore'\xF3w zbywany
+    milczeniem\u2026"
   Animator: {fileID: 0}
   OpeningAnimation: open
   ClosingAnimation: close
@@ -48573,7 +48580,7 @@ PrefabInstance:
         ale dra\u017Cni\u0105cy delikatne kocie nozdrza. M\xF3wi\u0142em to ze szczerym
         przekonaniem, gdy za\u015B s\u0142u\u017C\u0105cy zasugerowa\u0142, \u017Ce
         mo\u017Ce w gr\u0119 wchodz\u0105 raczej szczury b\u0105d\u017A myszy, stwierdzi\u0142em,
-        \u017Ce szczur\xF3w nie by\u0142o w zamknu od dobrych trzystu lat."
+        \u017Ce szczur\xF3w nie by\u0142o w zamku od dobrych trzystu lat."
       objectReference: {fileID: 0}
     - target: {fileID: 8183736047257835704, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
@@ -51919,7 +51926,7 @@ PrefabInstance:
         przodkowi, wtedy opactwo, czyni\u0105c ze\u0144 pierwszego barona Exham,
         nie pojawiaj\u0105 si\u0119 \u017Cadne podejrzane wzmianki na temat mej rodziny,
         potem jednak musia\u0142o si\u0119 zdarzy\u0107 co\u015B dziwnego. Jedna
-        z kronik wspomina, \u017Ce w roku 1307 de la Poer zosta\u0142 ,,przekety
+        z kronik wspomina, \u017Ce w roku 1307 de la Poer zosta\u0142 ,,przekl\u0119ty
         przez Boga'', zamek za\u015B, wniesiony przeze\u0144 na fundamentach dawnej
         \u015Bwi\u0105tyni i opactwa, zacz\u0105\u0142 budzi\u0107 w\u015Br\xF3d
         miejscowych szale\u0144cz\u0105 trwog\u0119 jako siedlisko z\u0142a. Najbardziej
@@ -54424,7 +54431,7 @@ PrefabInstance:
         type: 3}
       propertyPath: NoteText
       value: "    W kt\xF3rym\u015B momencie musia\u0142em niepostrze\u017Cenie zapa\u015B\u0107
-        w sen, pami\u0119tam bowim wyra\u017Anie, \u017Ce gdy wybudza\u0142em si\u0119
+        w sen, pami\u0119tam bowiem wyra\u017Anie, \u017Ce gdy wybudza\u0142em si\u0119
         z jakich\u015B dziwnych roje\u0144, kot zerwa\u0142 si\u0119 nagle z miejsca.
         Wpatrywa\u0142 si\u0119 intensywnie w jaki\u015B punkt na \u015Bcianie, nieco
         na zach\xF3d od okna - punkt \xF3w na moje oko nie wyr\xF3\u017Cnia\u0142
@@ -56050,7 +56057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1872486001
 Transform:
   m_ObjectHideFlags: 0
@@ -66881,7 +66888,7 @@ PrefabInstance:
     - target: {fileID: 8037243572258015233, guid: 9fbbdfd9a07f3234f895ccd233b4e0e9,
         type: 3}
       propertyPath: NoteText
-      value: "22 lipca m\xF3j stary czarny kot, kt\xF3rego nastroje znam doskonale,
+      value: "    22 lipca m\xF3j stary czarny kot, kt\xF3rego nastroje znam doskonale,
         dziwnie si\u0119 zachowywa\u0142. Nagle zje\u017Cy\u0142 si\u0119 w czujnym
         pogotowiu, i to tak bardzo, \u017Ce zgo\u0142a nie licowa\u0142o to z jego
         usposobieniem. Targany niepokojem j\u0105\u0142 przemierza\u0107 komnat\u0119
@@ -67424,6 +67431,11 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 367271346}
+    - target: {fileID: 3300494313135419584, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
+        type: 3}
+      propertyPath: _fatigueAudio
+      value: 
+      objectReference: {fileID: 1123707505}
     - target: {fileID: 3363754872341222463, guid: 1ca79823fa81b9540b1ee23e2db5b2b9,
         type: 3}
       propertyPath: m_AnchorMax.x

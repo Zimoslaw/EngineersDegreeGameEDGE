@@ -4970,11 +4970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "\tW pewnej chwili stopa omskn\u0119\u0142a mi si\u0119 tu\u017C obok
-        straszliwej kraw\u0119dzi jendego z tych do\u0142\xF3w i prze\u017Cy\u0142em
+        straszliwej kraw\u0119dzi jednego z tych do\u0142\xF3w i prze\u017Cy\u0142em
         chwil\u0119 ekstatycznej trwogi. Potem z bezbrze\u017Cnej, czarnej jak atrament
         dali doszed\u0142 mnie d\u017Awi\u0119k, kt\xF3ry wyda\u0142 mi si\u0119
         znajomy. D\u017Awi\u0119kiem, kt\xF3ry us\u0142ysza\u0142em, by\u0142 bowiem
-        upiorny tupot szczur\xF3w, nieutrudzonych w \u015Bciaganiu nowych zgr\xF3z
+        upiorny tupot szczur\xF3w, nieutrudzonych w \u015Bciganiu nowych zgr\xF3z
         - diabelnego pomiotu wiod\u0105cego mnie uparcie coraz dalej i dalej, do
         samego \u015Brodka Ziemi, wprost w paszcze jaski\u0144, gdzie Nyarlathotep,
         szalony b\xF3g bez twarzy, zawodzi bezrozumnie do wt\xF3ru dw\xF3ch bezkszta\u0142tnych
@@ -5814,8 +5814,9 @@ MonoBehaviour:
   soundsToPlay:
   - {fileID: 2144819841}
   - {fileID: 1931721337}
-  subtitlesToShow: 
-  subtitlesTime: 4
+  subtitlesToShow: "Ta ciemno\u015B\u0107... Dalej ni\u017Ali okiem si\u0119gn\u0105\u0107...
+    Czy to ukrywali przed \u015Bwiatem moi przekl\u0119ci przodkowie?"
+  subtitlesTime: 5
 --- !u!65 &1980927995
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -81,14 +81,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 552adfb32835b154190af08278758248, type: 3}
   ViewRadius: 16
   ViewAngle: 345
-  HearRadius: 12
+  HearRadius: 10
   playerMask:
     serializedVersion: 2
     m_Bits: 128
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1
-  CurrentDestination: {x: 12, y: 0.1, z: 8}
+  CurrentDestination: {x: 12, y: 0.1, z: 20}
 --- !u!195 &4809710504082919509
 NavMeshAgent:
   m_ObjectHideFlags: 0

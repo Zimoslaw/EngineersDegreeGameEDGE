@@ -38,7 +38,7 @@ public class DemonAi : MonoBehaviour
         randomSoundInterval = Random.Range(3, 20);
 
         StartCoroutine(nameof(LookForDestinationWithDelay), 0.2f);
-        StartCoroutine(nameof(ListenToSteps), 0.5f);
+        StartCoroutine(nameof(ListenToSteps), 1f);
         StartCoroutine(nameof(PlayRandomSound));
     }
 

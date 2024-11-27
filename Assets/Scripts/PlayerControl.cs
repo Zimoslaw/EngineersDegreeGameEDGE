@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Playables;
-using UnityEngine.Scripting.APIUpdating;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerControl : MonoBehaviour
@@ -48,6 +48,9 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private AudioClip _walkingSteps;
     [SerializeField] private AudioClip _runningSteps;
 
+    // Fatigue after running audio
+    [SerializeField] private AudioSource _fatigueAudio;
+
     void Start()
     {
         _rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -64,6 +67,9 @@ public class PlayerControl : MonoBehaviour
         // Locking cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Coroutine for random pitch change for player steps
+        StartCoroutine(nameof(ChangeStepsPitch));
     }
 
     void Update()
@@ -171,9 +177,16 @@ public class PlayerControl : MonoBehaviour
         float sprintMultiplier = 1;
         if (verticalAxis > 0 && horizontalAxis == 0 && Input.GetButton("Run"))
         {
-            _sprintTimer += Time.deltaTime;
             if (_sprintTimer < 5)
+            {
+                _sprintTimer += Time.deltaTime;
                 sprintMultiplier = 2;
+            }
+            else
+            {
+                if (!_fatigueAudio.isPlaying)
+                    _fatigueAudio.Play();
+            }
         }
         else
         {
@@ -251,6 +264,15 @@ public class PlayerControl : MonoBehaviour
             _gameOverTimeline.Play();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
+    }
+
+    IEnumerator ChangeStepsPitch()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.8f);
+            _stepsAudio.pitch = Random.Range(0.9f, 1.1f);
         }
     }
 }
