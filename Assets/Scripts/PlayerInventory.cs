@@ -102,6 +102,8 @@ public class PlayerInventory : MonoBehaviour
                 Destroy(child.gameObject);
         }
 
+        int index = 0;
+
         // Displaying items
         foreach (Interactable item in items)
         {
@@ -109,6 +111,9 @@ public class PlayerInventory : MonoBehaviour
             // In case of key, button is disabled
             if (item.Type == InteractableTypeEnum.Key)
                 newItem.GetComponent<Button>().interactable = false;
+            // In case of first item, button is selected
+            if (index == 0)
+                newItem.GetComponent<Button>().Select();
 
             newItem.transform.SetParent(_inventoryBackground.transform, false);
             newItem.GetComponent<RectTransform>().localPosition = new Vector3(-420, yPos-=48, 0);
@@ -132,6 +137,8 @@ public class PlayerInventory : MonoBehaviour
                 newItem.GetComponentInChildren<TextMeshProUGUI>().text = "• " + item.Name + " (×" + item.amount + ")";
             else
                 newItem.GetComponentInChildren<TextMeshProUGUI>().text = "• " + item.Name;
+
+            index++;
         }
 
         _inventoryBackground.SetActive(true);

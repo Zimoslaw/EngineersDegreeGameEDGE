@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject settingsMenu;
+    public Button PlayButton;
     public Toggle invertYAxisToggle;
     public Slider mouseSensitivitySlider;
     public Slider SFXVolumeSlider;
@@ -85,12 +86,14 @@ public class MainMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
+        invertYAxisToggle.Select();
     }
 
     public void SettingsCloseButton()
     {
         settingsMenu.SetActive(false);
         mainMenu.SetActive(true);
+        PlayButton.Select();
     }
 
     public void InvertYAxisCheckbox()

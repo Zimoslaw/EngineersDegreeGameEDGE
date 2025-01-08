@@ -8,8 +8,11 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject PauseMenuObject;
     public GameObject SettingsMenu;
     public GameObject ExitDialog;
+    public Button ResumeButton;
+    public Button ReturnButton;
     public Toggle InvertYAxisToggle;
     public Slider MouseSensitivitySlider;
     public Slider SFXVolumeSlider;
@@ -28,11 +31,15 @@ public class PauseMenu : MonoBehaviour
     public void SettingsOpenButton()
     {
         SettingsMenu.SetActive(true);
+        PauseMenuObject.SetActive(false);
+        InvertYAxisToggle.Select();
     }
 
     public void SettingsCloseButton()
     {
+        PauseMenuObject.SetActive(true);
         SettingsMenu.SetActive(false);
+        ResumeButton.Select();
     }
 
     public void InvertYAxisCheckbox()
@@ -62,11 +69,15 @@ public class PauseMenu : MonoBehaviour
     public void ExitDialogOpenButton()
     {
         ExitDialog.SetActive(true);
+        PauseMenuObject.SetActive(false);
+        ReturnButton.Select();
     }
 
     public void ExitDialogCloseButton()
     {
+        PauseMenuObject.SetActive(true);
         ExitDialog.SetActive(false);
+        ResumeButton.Select();
     }
 
     public void MainMenu()

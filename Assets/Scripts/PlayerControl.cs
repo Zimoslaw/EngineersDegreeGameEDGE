@@ -175,7 +175,7 @@ public class PlayerControl : MonoBehaviour
 
         // Sprinting (only for forward movement, for max 5 seconds)
         float sprintMultiplier = 1;
-        if (verticalAxis > 0 && horizontalAxis == 0 && Input.GetButton("Run"))
+        if (verticalAxis > 0 && Input.GetButton("Run"))
         {
             if (_sprintTimer < 5)
             {
@@ -200,7 +200,8 @@ public class PlayerControl : MonoBehaviour
         if (counterForce >= 0)
         {
             _rigidBody.AddForce(backwardsMultiplier * forwardMultipllier * _movementSpeed * sprintMultiplier * counterForce * verticalAxis * transform.forward);
-            _rigidBody.AddForce(sideMultiplier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * horizontalAxis * transform.right);
+            if (sprintMultiplier == 1)
+                _rigidBody.AddForce(sideMultiplier * _movementSpeed * (2 * _movementSpeed - (currentSpeed * 50)) * horizontalAxis * transform.right);
         }
 
         // Move cameraObject
@@ -228,11 +229,12 @@ public class PlayerControl : MonoBehaviour
     // Pause or unpause
     public void Pause()
     {
-        if (!_menus[0].activeInHierarchy)
+        if (!_menus[0].activeInHierarchy && !_menus[1].activeInHierarchy && !_menus[2].activeInHierarchy)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             _playerCamera.gameObject.GetComponent<InteractionController>().IsPaused = true;
+            gameObject.GetComponent<PauseMenu>().ResumeButton.Select();
             Time.timeScale = 0;
             _menus[0].SetActive(true);
             _pauseMenuAudio.Play();
@@ -242,6 +244,7 @@ public class PlayerControl : MonoBehaviour
         {
             _menus[0].SetActive(false);
             _menus[1].SetActive(false);
+            _menus[2].SetActive(false);
             Time.timeScale = 1;
             _playerCamera.gameObject.GetComponent<InteractionController>().IsPaused = false;
             if (!_playerCamera.gameObject.GetComponent<InteractionController>().IsInventoryOpen)
