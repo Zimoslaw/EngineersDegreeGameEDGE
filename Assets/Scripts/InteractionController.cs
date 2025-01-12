@@ -73,7 +73,8 @@ public class InteractionController : MonoBehaviour
                                 break;
                         }
 
-                        _interactableAction.text = "[LPM] " + action;
+                        _interactableAction.text = action;
+                        _interactableAction.gameObject.SetActive(true);
 
                         if (Input.GetButtonDown("Interaction") && !IsInventoryOpen)
                         {
@@ -86,12 +87,14 @@ public class InteractionController : MonoBehaviour
             {
                 _interactableName.text = null;
                 _interactableAction.text = null;
+                _interactableAction.gameObject.SetActive(false);
             }
         }
         else
         {
             _interactableName.text = null;
             _interactableAction.text = null;
+            _interactableAction.gameObject.SetActive(false);
         }
 
         if (Input.GetButtonDown("Inventory"))

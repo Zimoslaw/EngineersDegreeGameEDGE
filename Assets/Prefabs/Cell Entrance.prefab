@@ -125,7 +125,7 @@ MonoBehaviour:
   - {fileID: 3960274510329326871}
   animatorsToPlay: []
   soundsToPlay: []
-  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] podczas chodzenia,
+  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] / RB podczas chodzenia,
     aby biec."
   subtitlesTime: 3
 --- !u!1 &3960274510329326871
@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 6757028405547910307}
   animatorsToPlay: []
   soundsToPlay: []
-  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] podczas chodzenia,
+  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] / RB podczas chodzenia,
     aby biec."
   subtitlesTime: 3
 --- !u!1 &6056396596771863811
@@ -547,7 +547,7 @@ MonoBehaviour:
   - {fileID: 3960274510329326871}
   animatorsToPlay: []
   soundsToPlay: []
-  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] podczas chodzenia,
+  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] / RB podczas chodzenia,
     aby biec."
   subtitlesTime: 3
 --- !u!1 &6757028405547910307
@@ -675,7 +675,7 @@ MonoBehaviour:
   - {fileID: 3960274510329326871}
   animatorsToPlay: []
   soundsToPlay: []
-  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] podczas chodzenia,
+  subtitlesToShow: "WSKAZ\xD3WKA: U\u017Cyj klawisza [L Shift] / RB podczas chodzenia,
     aby biec."
   subtitlesTime: 3
 --- !u!1 &8480555881600598308
