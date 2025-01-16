@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Class controlling the bahaviour of demon
+/// </summary>
 public class DemonAi : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
@@ -31,6 +34,7 @@ public class DemonAi : MonoBehaviour
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+	// Get maze size
         labyrinth = GameObject.FindWithTag("Labyrinth").GetComponent<LabyrinthGenerator>();
         if (!labyrinth.IsUnityNull())
             labyrinthSize = labyrinth.labyrinthSize;
